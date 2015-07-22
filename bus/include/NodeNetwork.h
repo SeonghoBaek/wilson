@@ -1,6 +1,6 @@
 /**
 *
-*  @author		Seongho Baek(major.baek@lge.com)
+*  @author		Seongho Baek
 *  @date		2014.08.12
 */
 
