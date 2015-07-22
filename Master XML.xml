@@ -1,0 +1,115 @@
+
+
+<nodebus type=NBUS_TYPE_REQUEST id=NBUS_CMD_LIST node="user.node" syncid="4" buffer="0xFadsfasdfa"/>
+<nodebus type=NBUS_TYPE_REQUEST id=NBUS_CMD_JOIN node="user.node"/>
+<nodebus type=NBUS_TYPE_REQUEST id=NBUS_CMD_DROP node="user.node"/>
+<nodebus type=NBUS_TYPE_RESPONSE id=NBUS_CMD_LIST node="user.node" syncid="4" buffer="0xFAAFDFDF00">
+	<node>"user1.node"</node>
+	<node>"user2.node"</node>
+	<node>"user3.node"</node>
+	<node>"user4.node"</node>
+</nodebus>
+<nodebus type=NBUS_TYPE_EVENT id=NBUS_EVENT_NODE_ADDED node="new.node"/>
+<nodebus type=NBUS_TYPE_EVENT id=NBUS_EVENT_NODE_DROPPED node="dropped.node"/>
+<nodebus type=NBUS_TYPE_EVENT id=NBUS_EVENT_NETWORK_DETACHED/>
+<nodebus type=NBUS_TYPE_EVENT id=NBUS_EVENT_SET_DEFAULT_NODE node="node.name"/>
+
+<event type=”READY”/> // Client send to Server. This says client can receive messages.
+
+<event type=”REGOK”/>   //(From server to client) Client Registered to Server Success.
+
+<event type=”LOG” format=”JSON” length=”29113”/>   // Log JSON Message
+
+<event type=”LOG” format=”TXT” length=”31582”/>   // Log TXT Message
+
+<event type=”ERROR” id=”SYS”/>    // System error
+
+<event type=”IMG” format=”JPG” length=”22423”/>    // Image data
+
+<event type=”TC” id=”1234” res=”1”/>  // TestCase 1234 completed OK
+
+<event type=”CMD” res=”0”> //Command failure
+	<command type=”RPC”>   // ATM RPC
+		<arg>KADP_FID_2</arg> 
+		<arg>ATLIB_KADP_SYS_ReadReg</arg>  
+		<arg>0xc0035009  0x10</arg>  
+ 	</command>
+</event>
+
+<event type=”INFO” format=”JSON” length=”1422”/> //System information JSON
+
+<event type=”INFO” format=”TXT” length=”1891”/> //System information TXT
+
+ <command type=”STAY”/>   // Just stay.
+ <command type=”INFO”/>  // Get System Information.
+ <command type=”LOG”/>  // Get Log data
+ <command type=”LOGOFF”/>  // Get Log data
+ <command type=”IMG”/>  // Capture Image
+ <command type="START"> // Start New Test Session
+ 	<arg name="session">1234</arg> // session id
+ 	<arg name="tid">1234</arg> // tid
+ </command>
+ <command type=”STOP”/>  // Stop AutoTest
+ <command type=”PAUSE”/>  // Pause AutoTest
+ <command type=”RESUME”/>  // Resume AutoTest
+ <command type="LUA">
+ <command type="EXIT"/>
+ <command type="COMPLETE">
+ 	<arg name="result">1</arg>  // 1: ok, 0: not ok, 2: unknown
+ </command>
+ <arg>chch.lua</arg>
+ </command>
+ <command type="ONOFF">
+ 	<arg>1000</arg>
+ </command>
+ <command type=”EPK”>   // Flash EPK
+	<arg>tftp://10.10.10.10/epk/test.epk</arg> 
+ </command>	
+
+<command type=”INFO”>  // Retrieve target simple info
+	<arg>soc</arg>  // get soc name of target
+ </command>
+
+<command type=”RPC”>   // Call ATLib function
+	<arg>KADP_FID_2</arg>  // Function ID 
+<arg>ATLIB_KADP_SYS_ReadReg</arg>  // Function Name 
+	<arg>0xc0035009  0x10</arg>  // Function parameter
+</command>
+
+<command type=”ARPC”>  // Call function of ATLib asynchronously
+	<arg> Remote Log URL </arg> // upload the log of func to this URL
+	<arg>KADP_FID_2</arg>  // Function ID 
+<arg>ATLIB_KADP_SYS_ReadReg</arg>  // Function Name 
+<arg>0xc0035009  0x10</arg>  // Function parameter
+</command>	
+
+<command type=”TC”>  // download TC file and execute it
+	<arg>tftp://10.10.10.10/tc/testcase1.tc</arg>  // tc file
+	<arg> tftp://10.10.10.10/tc/log/tc1.log </arg> // upload the tc log 
+</command>
+
+<command type=”SH”>  // Download shell script file and then execute it in the target
+	<arg>tftp://10.10.10.10/sh/system_info.sh</arg>  //shell file
+</command>	
+
+<command type=”CFG”> // Set ATMgr. configuration
+	<arg>AM</arg>  // config key(AM : Autotest Mode)
+	<arg>1</arg> // 1: enable ,0:disable
+</command>	
+
+<testcase id=”5123” repeat="10000">   // Testcase 5123. Run 10000 times. 
+	<commands>
+		<command type=”RPC”>
+			<arg>KADP_FID_2</arg>  
+		<arg>ATLIB_KADP_SYS_ReadReg</arg>  
+			<arg>0xc0035009  0x10</arg>
+		</command>
+		<command type=”WAIT” time=”100”/>    // wait 100ms
+		<command type=”RPC”>
+			<arg>KADP_FID_2</arg> 
+		<arg>ATLIB_KADP_SYS_ReadReg</arg>  
+			<arg>0xc0035009  0x10</arg>
+		</command>
+		<command type=”WAIT” time=”200”/>    // wait 200ms
+	</commands>
+</testcase>
