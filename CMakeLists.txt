@@ -61,4 +61,4 @@ set(HEADER_FILES
     )
 
 add_executable(nodebus ${SOURCE_FILES} ${HEADER_FILES})
-target_link_libraries(nodebus xml2)
+target_link_libraries(nodebus xml2 ${CMAKE_SOURCE_DIR}/lib/libjsoncpp.a)
