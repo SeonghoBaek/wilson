@@ -7,10 +7,6 @@
 #ifndef _XMLTYPES_H
 #define _XMLTYPES_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "List.h"
 #include "Log.h"
 #include <stdlib.h>
@@ -420,7 +416,4 @@ class EventXML : public IXML
 		char* toXML();
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif

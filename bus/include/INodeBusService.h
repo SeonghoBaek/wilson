@@ -7,11 +7,6 @@
 #ifndef __INODEBUSSERVICE_H
 #define __INODEBUSSERVICE_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <string.h>
 #include "Configure.h"
 #include "Types.h"
 #include "Packet.h"
@@ -67,7 +62,4 @@ class ICustomNodeBusService : public INodeBusService
 		virtual ~ICustomNodeBusService() {}
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif

@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Log.h"
 #include "Types.h"
 #include "DefaultGlobalService.h"
@@ -1503,11 +1499,4 @@ int ClientNode::updateStatus()
 
 	return 0;
 }
-
-#ifdef __cplusplus
-}
-#endif
-
-
-
 

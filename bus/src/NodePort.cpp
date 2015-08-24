@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "NodeNetwork.h"
 #include "Types.h"
 #include "NodePort.h"
@@ -426,6 +422,3 @@ int ServerNodePort::waitNodeConnection()
 	return sock;
 }
 
-#ifdef __cplusplus
-}
-#endif

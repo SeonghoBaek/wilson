@@ -7,10 +7,6 @@
 #ifndef _XMLPARSER_H
 #define _XMLPARSER_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <ctype.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
@@ -51,7 +47,4 @@ class XMLParser
 		  return str;
 		}
 };
-#ifdef __cplusplus
-}
-#endif
 #endif

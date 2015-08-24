@@ -7,10 +7,6 @@
 #ifndef		_TYPES_H_
 #define		_TYPES_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -54,10 +50,9 @@ typedef	 long long		__F_OFFSET_T;
 #define __f_offset_t
 #endif
 
-#if (!defined(bool) && !defined(__bool))
-typedef	unsigned long			__BOOLEAN;
-#define bool					__BOOLEAN
-#define __bool
+#if (!defined(__cplusplus))
+typedef	unsigned long			__BOOLEAN__;
+#define bool					__BOOLEAN__
 #endif
 
 #define		NBUS_THREAD_PRIORITY_BASE		50
@@ -212,9 +207,5 @@ class NBUS_CMD_QUEUE
 		int 		getSize();
 		int 		getQSize() { return this->mQSize;}
 };
-		
-#ifdef __cplusplus
-}
-#endif
 #endif
 

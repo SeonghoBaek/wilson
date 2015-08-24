@@ -24,10 +24,6 @@
 #include "Lock.h"
 #include "Types.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define SOCK_PAGE_SIZE 4096
 
 int NodeNetwork::receiveFromSocket(int sd, void* buffer, size_t bufferSize)
@@ -529,7 +525,3 @@ int NodeNetwork::setupServerSocket(const char *address, int port)
 
 	return sock;
 }
-
-#ifdef __cplusplus
-}
-#endif

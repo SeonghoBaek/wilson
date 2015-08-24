@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Types.h"
 #include "NodeBus.h"
 #include "BigNode.h"
@@ -338,10 +334,4 @@ float BigNode::getVectorLength(int dim, int session)
 {
 	return this->mSMPL.getMean(dim, session);
 }
-
-#ifdef __cplusplus
-}
-#endif
-
-
 

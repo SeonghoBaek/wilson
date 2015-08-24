@@ -4,9 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #include "NodeLooper.h"
 #include "Log.h"
@@ -204,6 +201,3 @@ int NodeLooper::sendMessage(const char* msg, int length)
 	return (int)write(this->mFd[1], msg, length);
 }
 
-#ifdef __cplusplus
-}
-#endif

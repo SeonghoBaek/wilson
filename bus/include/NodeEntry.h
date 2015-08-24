@@ -7,11 +7,7 @@
 #ifndef __NODEENTRY_H
 #define __NODEENTRY_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <string.h>
+#include "Types.h"
 #include "List.h"
 #include "XMLTypes.h"
 #include "Configure.h"
@@ -70,7 +66,4 @@ class ClientNodeEntry : public NodeEntry
 		ClientNodeEntry(const char *desc) : NodeEntry(desc, NODE_ENTRY_CLIENT) {}
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif

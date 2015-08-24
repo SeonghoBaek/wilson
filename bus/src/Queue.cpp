@@ -5,10 +5,6 @@
 */
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <string.h>
 #include "Log.h"
 #include "Lock.h"
@@ -223,6 +219,3 @@ int NBUS_CMD_QUEUE::getSize()
 	return size;
 }
 
-#ifdef __cplusplus
-}
-#endif

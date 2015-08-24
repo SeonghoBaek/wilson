@@ -7,11 +7,6 @@
 #ifndef __LOCK_H
 #define __LOCK_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <pthread.h>
 #include "Types.h"
 
 #define LOCK(x) for (Lock __l = x;!__l;__l++)
@@ -44,7 +39,4 @@ class Lock
     	bool 	b;
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif

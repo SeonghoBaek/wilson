@@ -4,20 +4,17 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Log.h"
-#include "NodeBus.h"
 #include "NodeLooper.h"
 #include "Thread.h"
+#include "json/json.h"
 #include "XMLTypes.h"
 #include "XMLParser.h"
 #include "DefaultService.h"
 #include "DefaultGlobalService.h"
 #include "INodeBusService.h"
 #include "Configure.h"
+#include "NodeBus.h"
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -68,6 +65,3 @@ int main(int argc, char** argv)
 	return 0;
 }
 
-#ifdef __cplusplus
-}
-#endif

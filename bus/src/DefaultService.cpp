@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "DefaultService.h"
 #include "Configure.h"
 #include "Log.h"
@@ -533,6 +529,3 @@ void DefaultService::processMessage()
 	}
 }
 
-#ifdef __cplusplus
-}
-#endif

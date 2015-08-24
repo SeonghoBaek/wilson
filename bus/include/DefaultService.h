@@ -7,10 +7,6 @@
 #ifndef __LOCALSERVICE_H
 #define __LOCALSERVICE_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Lock.h"
 #include "NodeEntry.h"
 #include "List.h"
@@ -25,9 +21,6 @@ extern "C" {
 #include "Types.h"
 #include "NodePort.h"
 #include "NodeNetwork.h"
-
-#include <stdlib.h>
-#include <string.h>
 
 class DefaultService: public NodeBusService
 {
@@ -175,7 +168,4 @@ class DefaultService: public NodeBusService
 		}
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif

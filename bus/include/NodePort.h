@@ -7,10 +7,6 @@
 #ifndef NODEPORT_H_
 #define NODEPORT_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Thread.h"
 #include "List.h"
 #include "Configure.h"
@@ -96,9 +92,5 @@ class ServerNodePort : public Thread
 
 		virtual ~ServerNodePort() {};
 };
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* NODEPORT_H_ */

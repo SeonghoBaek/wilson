@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Bridge.h"
 #include "Log.h"
 #include "Configure.h"
@@ -292,6 +288,3 @@ int DomainBridge::cross(char *receiver, void *stream, int length)
 	return stat;
 }
 
-#ifdef __cplusplus
-}
-#endif

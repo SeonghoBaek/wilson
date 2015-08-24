@@ -4,17 +4,11 @@
 *  @date		2014.08.12
 */
 
-#ifndef THREAD_H_
-#define THREAD_H_
+#ifndef _THREAD_H_
+#define _THREAD_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <pthread.h>
-#include <stdlib.h>
-#include "Types.h"
 #include "Log.h"
+#include "Types.h"
 
 #define THREAD_NAME_LENGTH 64
 // Should be thread safe.
@@ -106,7 +100,4 @@ class Thread
 #define IMPLEMENT_THREAD(_func) 		\
 		virtual int loop() 	{ _func; return 0; } \
 
- #ifdef __cplusplus
- }
- #endif
 #endif /* THREAD_H_ */

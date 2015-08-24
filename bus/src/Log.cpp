@@ -4,9 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #include "Log.h"
 #include "Lock.h"
@@ -65,6 +62,3 @@ void NBUS_PrintMessage(int type, const char *func, int line, const char *fmt, ..
 	return;
 }
 
-#ifdef __cplusplus
-}
-#endif

@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "XMLParser.h"
 #include "Lock.h"
 #include "Log.h"
@@ -911,6 +907,3 @@ char* ArgumentXML::toXML()
 	return pStrXml;
 }
 
-#ifdef __cplusplus
-}
-#endif

@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Normalizer.h"
 #include "Types.h"
 #include "List.h"
@@ -459,9 +455,4 @@ char *Normalizer::normalizeCharacter(char *str, int length, char *target)
 
     return target;
 }
-
-#ifdef __cplusplus
-}
-#endif
-
 

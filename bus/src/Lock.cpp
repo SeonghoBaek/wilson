@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Lock.h"
 #include "Types.h"
 
@@ -49,6 +45,3 @@ int Lock::deleteMutex(Mutex_t mutex)
 	return 0;
 }
 
-#ifdef __cplusplus
-}
-#endif

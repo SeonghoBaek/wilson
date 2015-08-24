@@ -7,11 +7,7 @@
 #ifndef _BRIDGE_H_
 #define _BRIDGE_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <string.h>
+#include "Types.h"
 #include "NodeLooper.h"
 #include "Lock.h"
 #include "Thread.h"
@@ -103,7 +99,4 @@ class DomainBridge : public Thread
 		static int cross(char *receiver, void *stream, int length);
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif

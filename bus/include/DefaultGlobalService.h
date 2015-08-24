@@ -7,10 +7,6 @@
 #ifndef DEFAULTGLOBALSERVICE_H_
 #define DEFAULTGLOBALSERVICE_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "DefaultService.h"
 #include "Thread.h"
 #include "List.h"
@@ -61,7 +57,4 @@ class DefaultGlobalService: public DefaultService
 		virtual void processMessage();
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* DEFAULTGLOBALSERVICE_H_ */

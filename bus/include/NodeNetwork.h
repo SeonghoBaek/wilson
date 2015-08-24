@@ -7,10 +7,6 @@
 #ifndef _NODENETWORK_H_
 #define _NODENETWORK_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "Types.h"
 #include "Lock.h"
     
@@ -46,7 +42,4 @@ class NodeNetwork
 		NodeNetwork() {}
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif

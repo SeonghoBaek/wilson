@@ -4,10 +4,6 @@
 *  @date		2014.08.12
 */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdio.h>
 #include <string.h>
 
@@ -149,6 +145,3 @@ char* INodeBusService::getNodeList(const char* pResultReceiver)
     return pBuff;
 }
 
-#ifdef __cplusplus
-}
-#endif

@@ -7,10 +7,6 @@
 #ifndef _NODELOOPER_H_
 #define _NODELOOPER_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdio.h>
 #include <sys/poll.h>
 #include <unistd.h>
@@ -68,7 +64,4 @@ class NodeLooper
 
 		static void exit(int id);
 };
-#ifdef __cplusplus
-}
-#endif
 #endif

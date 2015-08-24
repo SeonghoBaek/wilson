@@ -6,9 +6,6 @@
  *      Author: major
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #include <string.h>
 #include "Packet.h"
@@ -299,9 +296,5 @@ bool NBUSPacket::isCompleted()
 
 	return FALSE;
 }
-
-#ifdef __cplusplus
-}
-#endif
 
 

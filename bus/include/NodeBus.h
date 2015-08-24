@@ -7,10 +7,6 @@
 #ifndef __NODEBUS_H_
 #define __NODEBUS_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "XMLTypes.h"
 #include "XMLParser.h"
 #include "Thread.h"
@@ -20,7 +16,6 @@ extern "C" {
 #include "Log.h"
 #include "NodeLooper.h"
 #include "INodeBusService.h"
-#include <string.h>
 
 class INode
 {
@@ -391,7 +386,4 @@ class NodeBus
 		NodeBus() {}
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif
