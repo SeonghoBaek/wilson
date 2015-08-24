@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 2.8)
 project(nodebus)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 #set(INCLUDE_DIRECTORIES "bus/include:/usr/include/libxml2")
 include_directories(bus/include)
 include_directories(/usr/include/libxml2)

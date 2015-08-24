@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var textSearch = require('mongoose-text-search');
 var schema = require('./mgs_schema');
 
-mongoose.connect('mongodb://wilson/log');
+mongoose.connect('mongodb://xserv/log');
 
 var con = mongoose.connection;
 var db = con.db;
