@@ -897,7 +897,7 @@ char* ArgumentXML::toXML()
 
 	if (strlen(this->mName) == 0)
 	{
-		sprintf(pStrXml, "<arg>%s</arg>", this->mName, this->mValue);
+		sprintf(pStrXml, "<arg>%s</arg>", this->mValue);
 	}
 	else
 	{
