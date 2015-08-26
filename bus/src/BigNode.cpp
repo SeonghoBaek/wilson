@@ -210,7 +210,9 @@ int BigNode::process()
 
 	ClientNode *pClient = NULL;
 
-	for(;;)
+    int loop = 1;
+
+    while(loop == 1)
 	{
 		// Check Run List
 		sleep(4);
