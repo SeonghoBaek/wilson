@@ -47,44 +47,365 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/major/Development/wilson
+CMAKE_SOURCE_DIR = /home/major/workspace/wilson
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/major/Development/wilson
+CMAKE_BINARY_DIR = /home/major/workspace/wilson
 
 #=============================================================================
-# Target rules for target CMakeFiles/nodebus.dir
+# Directory level rules for directory external/jsoncpp
+
+# Convenience name for "all" pass in the directory.
+external/jsoncpp/all: external/jsoncpp/src/all
+external/jsoncpp/all: external/jsoncpp/include/all
+.PHONY : external/jsoncpp/all
+
+# Convenience name for "clean" pass in the directory.
+external/jsoncpp/clean: external/jsoncpp/src/clean
+external/jsoncpp/clean: external/jsoncpp/include/clean
+.PHONY : external/jsoncpp/clean
+
+# Convenience name for "preinstall" pass in the directory.
+external/jsoncpp/preinstall: external/jsoncpp/src/preinstall
+external/jsoncpp/preinstall: external/jsoncpp/include/preinstall
+.PHONY : external/jsoncpp/preinstall
+
+#=============================================================================
+# Directory level rules for directory external/jsoncpp/src
+
+# Convenience name for "all" pass in the directory.
+external/jsoncpp/src/all: external/jsoncpp/src/lib_json/all
+external/jsoncpp/src/all: external/jsoncpp/src/jsontestrunner/all
+external/jsoncpp/src/all: external/jsoncpp/src/test_lib_json/all
+.PHONY : external/jsoncpp/src/all
+
+# Convenience name for "clean" pass in the directory.
+external/jsoncpp/src/clean: external/jsoncpp/src/lib_json/clean
+external/jsoncpp/src/clean: external/jsoncpp/src/jsontestrunner/clean
+external/jsoncpp/src/clean: external/jsoncpp/src/test_lib_json/clean
+.PHONY : external/jsoncpp/src/clean
+
+# Convenience name for "preinstall" pass in the directory.
+external/jsoncpp/src/preinstall: external/jsoncpp/src/lib_json/preinstall
+external/jsoncpp/src/preinstall: external/jsoncpp/src/jsontestrunner/preinstall
+external/jsoncpp/src/preinstall: external/jsoncpp/src/test_lib_json/preinstall
+.PHONY : external/jsoncpp/src/preinstall
+
+#=============================================================================
+# Directory level rules for directory external/jsoncpp/src/lib_json
+
+# Convenience name for "all" pass in the directory.
+external/jsoncpp/src/lib_json/all: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/all
+.PHONY : external/jsoncpp/src/lib_json/all
+
+# Convenience name for "clean" pass in the directory.
+external/jsoncpp/src/lib_json/clean: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/clean
+.PHONY : external/jsoncpp/src/lib_json/clean
+
+# Convenience name for "preinstall" pass in the directory.
+external/jsoncpp/src/lib_json/preinstall:
+.PHONY : external/jsoncpp/src/lib_json/preinstall
+
+#=============================================================================
+# Target rules for target external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir
 
 # All Build rule for target.
-CMakeFiles/nodebus.dir/all:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/depend
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/Development/wilson/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
-	@echo "Built target nodebus"
-.PHONY : CMakeFiles/nodebus.dir/all
+external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/all:
+	$(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/depend
+	$(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/workspace/wilson/CMakeFiles  1 2 3
+	@echo "Built target jsoncpp_lib_static"
+.PHONY : external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/all
 
 # Include target in all.
-all: CMakeFiles/nodebus.dir/all
+all: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/nodebus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/Development/wilson/CMakeFiles 16
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/nodebus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/Development/wilson/CMakeFiles 0
-.PHONY : CMakeFiles/nodebus.dir/rule
+external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
+.PHONY : external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/rule
 
 # Convenience name for target.
-nodebus: CMakeFiles/nodebus.dir/rule
+jsoncpp_lib_static: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/rule
+.PHONY : jsoncpp_lib_static
+
+# clean rule for target.
+external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/clean:
+	$(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/clean
+.PHONY : external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/clean
+
+# clean rule for target.
+clean: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/jsoncpp/src/jsontestrunner
+
+# Convenience name for "all" pass in the directory.
+external/jsoncpp/src/jsontestrunner/all: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/all
+.PHONY : external/jsoncpp/src/jsontestrunner/all
+
+# Convenience name for "clean" pass in the directory.
+external/jsoncpp/src/jsontestrunner/clean: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/clean
+external/jsoncpp/src/jsontestrunner/clean: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/clean
+external/jsoncpp/src/jsontestrunner/clean: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/clean
+.PHONY : external/jsoncpp/src/jsontestrunner/clean
+
+# Convenience name for "preinstall" pass in the directory.
+external/jsoncpp/src/jsontestrunner/preinstall:
+.PHONY : external/jsoncpp/src/jsontestrunner/preinstall
+
+#=============================================================================
+# Target rules for target external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir
+
+# All Build rule for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/all: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/all
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/depend
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/workspace/wilson/CMakeFiles 
+	@echo "Built target jsoncpp_check"
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/all
+
+# Build rule for subdir invocation for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/rule
+
+# Convenience name for target.
+jsoncpp_check: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/rule
+.PHONY : jsoncpp_check
+
+# clean rule for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/clean:
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/clean
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/clean
+
+# clean rule for target.
+clean: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir
+
+# All Build rule for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/all: external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/all
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/all: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/all
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/depend
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/workspace/wilson/CMakeFiles 
+	@echo "Built target jsoncpp_readerwriter_tests"
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/all
+
+# Build rule for subdir invocation for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/rule
+
+# Convenience name for target.
+jsoncpp_readerwriter_tests: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/rule
+.PHONY : jsoncpp_readerwriter_tests
+
+# clean rule for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/clean:
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/clean
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/clean
+
+# clean rule for target.
+clean: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir
+
+# All Build rule for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/all: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/all
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/depend
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/workspace/wilson/CMakeFiles  6
+	@echo "Built target jsontestrunner_exe"
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/all
+
+# Include target in all.
+all: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/rule
+
+# Convenience name for target.
+jsontestrunner_exe: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/rule
+.PHONY : jsontestrunner_exe
+
+# clean rule for target.
+external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/clean:
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/clean
+.PHONY : external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/clean
+
+# clean rule for target.
+clean: external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/jsoncpp/src/test_lib_json
+
+# Convenience name for "all" pass in the directory.
+external/jsoncpp/src/test_lib_json/all: external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/all
+.PHONY : external/jsoncpp/src/test_lib_json/all
+
+# Convenience name for "clean" pass in the directory.
+external/jsoncpp/src/test_lib_json/clean: external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/clean
+.PHONY : external/jsoncpp/src/test_lib_json/clean
+
+# Convenience name for "preinstall" pass in the directory.
+external/jsoncpp/src/test_lib_json/preinstall:
+.PHONY : external/jsoncpp/src/test_lib_json/preinstall
+
+#=============================================================================
+# Target rules for target external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir
+
+# All Build rule for target.
+external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/all: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/all
+	$(MAKE) -f external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/build.make external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/depend
+	$(MAKE) -f external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/build.make external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/workspace/wilson/CMakeFiles  4 5
+	@echo "Built target jsoncpp_test"
+.PHONY : external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/all
+
+# Include target in all.
+all: external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
+.PHONY : external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/rule
+
+# Convenience name for target.
+jsoncpp_test: external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/rule
+.PHONY : jsoncpp_test
+
+# clean rule for target.
+external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/clean:
+	$(MAKE) -f external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/build.make external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/clean
+.PHONY : external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/clean
+
+# clean rule for target.
+clean: external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/jsoncpp/include
+
+# Convenience name for "all" pass in the directory.
+external/jsoncpp/include/all:
+.PHONY : external/jsoncpp/include/all
+
+# Convenience name for "clean" pass in the directory.
+external/jsoncpp/include/clean:
+.PHONY : external/jsoncpp/include/clean
+
+# Convenience name for "preinstall" pass in the directory.
+external/jsoncpp/include/preinstall:
+.PHONY : external/jsoncpp/include/preinstall
+
+#=============================================================================
+# Directory level rules for directory bus
+
+# Convenience name for "all" pass in the directory.
+bus/all: bus/CMakeFiles/nb.dir/all
+bus/all: bus/CMakeFiles/nodebus.dir/all
+.PHONY : bus/all
+
+# Convenience name for "clean" pass in the directory.
+bus/clean: bus/CMakeFiles/nb.dir/clean
+bus/clean: bus/CMakeFiles/nodebus.dir/clean
+.PHONY : bus/clean
+
+# Convenience name for "preinstall" pass in the directory.
+bus/preinstall:
+.PHONY : bus/preinstall
+
+#=============================================================================
+# Target rules for target bus/CMakeFiles/nb.dir
+
+# All Build rule for target.
+bus/CMakeFiles/nb.dir/all:
+	$(MAKE) -f bus/CMakeFiles/nb.dir/build.make bus/CMakeFiles/nb.dir/depend
+	$(MAKE) -f bus/CMakeFiles/nb.dir/build.make bus/CMakeFiles/nb.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/workspace/wilson/CMakeFiles  7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+	@echo "Built target nb"
+.PHONY : bus/CMakeFiles/nb.dir/all
+
+# Include target in all.
+all: bus/CMakeFiles/nb.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bus/CMakeFiles/nb.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 16
+	$(MAKE) -f CMakeFiles/Makefile2 bus/CMakeFiles/nb.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
+.PHONY : bus/CMakeFiles/nb.dir/rule
+
+# Convenience name for target.
+nb: bus/CMakeFiles/nb.dir/rule
+.PHONY : nb
+
+# clean rule for target.
+bus/CMakeFiles/nb.dir/clean:
+	$(MAKE) -f bus/CMakeFiles/nb.dir/build.make bus/CMakeFiles/nb.dir/clean
+.PHONY : bus/CMakeFiles/nb.dir/clean
+
+# clean rule for target.
+clean: bus/CMakeFiles/nb.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bus/CMakeFiles/nodebus.dir
+
+# All Build rule for target.
+bus/CMakeFiles/nodebus.dir/all:
+	$(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/depend
+	$(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/major/workspace/wilson/CMakeFiles  23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38
+	@echo "Built target nodebus"
+.PHONY : bus/CMakeFiles/nodebus.dir/all
+
+# Include target in all.
+all: bus/CMakeFiles/nodebus.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bus/CMakeFiles/nodebus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 16
+	$(MAKE) -f CMakeFiles/Makefile2 bus/CMakeFiles/nodebus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
+.PHONY : bus/CMakeFiles/nodebus.dir/rule
+
+# Convenience name for target.
+nodebus: bus/CMakeFiles/nodebus.dir/rule
 .PHONY : nodebus
 
 # clean rule for target.
-CMakeFiles/nodebus.dir/clean:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/clean
-.PHONY : CMakeFiles/nodebus.dir/clean
+bus/CMakeFiles/nodebus.dir/clean:
+	$(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/clean
+.PHONY : bus/CMakeFiles/nodebus.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/nodebus.dir/clean
+clean: bus/CMakeFiles/nodebus.dir/clean
 .PHONY : clean
 
 #=============================================================================

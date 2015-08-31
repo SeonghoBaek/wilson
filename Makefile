@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/major/Development/wilson
+CMAKE_SOURCE_DIR = /home/major/workspace/wilson
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/major/Development/wilson
+CMAKE_BINARY_DIR = /home/major/workspace/wilson
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -57,6 +57,47 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -69,9 +110,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/Development/wilson/CMakeFiles /home/major/Development/wilson/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles /home/major/workspace/wilson/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/Development/wilson/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/major/workspace/wilson/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -99,6 +140,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named jsoncpp_lib_static
+
+# Build rule for target.
+jsoncpp_lib_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jsoncpp_lib_static
+.PHONY : jsoncpp_lib_static
+
+# fast build rule for target.
+jsoncpp_lib_static/fast:
+	$(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build
+.PHONY : jsoncpp_lib_static/fast
+
+#=============================================================================
+# Target rules for targets named jsoncpp_check
+
+# Build rule for target.
+jsoncpp_check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jsoncpp_check
+.PHONY : jsoncpp_check
+
+# fast build rule for target.
+jsoncpp_check/fast:
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_check.dir/build
+.PHONY : jsoncpp_check/fast
+
+#=============================================================================
+# Target rules for targets named jsoncpp_readerwriter_tests
+
+# Build rule for target.
+jsoncpp_readerwriter_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jsoncpp_readerwriter_tests
+.PHONY : jsoncpp_readerwriter_tests
+
+# fast build rule for target.
+jsoncpp_readerwriter_tests/fast:
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsoncpp_readerwriter_tests.dir/build
+.PHONY : jsoncpp_readerwriter_tests/fast
+
+#=============================================================================
+# Target rules for targets named jsontestrunner_exe
+
+# Build rule for target.
+jsontestrunner_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jsontestrunner_exe
+.PHONY : jsontestrunner_exe
+
+# fast build rule for target.
+jsontestrunner_exe/fast:
+	$(MAKE) -f external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/build.make external/jsoncpp/src/jsontestrunner/CMakeFiles/jsontestrunner_exe.dir/build
+.PHONY : jsontestrunner_exe/fast
+
+#=============================================================================
+# Target rules for targets named jsoncpp_test
+
+# Build rule for target.
+jsoncpp_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jsoncpp_test
+.PHONY : jsoncpp_test
+
+# fast build rule for target.
+jsoncpp_test/fast:
+	$(MAKE) -f external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/build.make external/jsoncpp/src/test_lib_json/CMakeFiles/jsoncpp_test.dir/build
+.PHONY : jsoncpp_test/fast
+
+#=============================================================================
+# Target rules for targets named nb
+
+# Build rule for target.
+nb: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nb
+.PHONY : nb
+
+# fast build rule for target.
+nb/fast:
+	$(MAKE) -f bus/CMakeFiles/nb.dir/build.make bus/CMakeFiles/nb.dir/build
+.PHONY : nb/fast
+
+#=============================================================================
 # Target rules for targets named nodebus
 
 # Build rule for target.
@@ -108,392 +227,8 @@ nodebus: cmake_check_build_system
 
 # fast build rule for target.
 nodebus/fast:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/build
+	$(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/build
 .PHONY : nodebus/fast
-
-bus/src/BigNode.o: bus/src/BigNode.cpp.o
-.PHONY : bus/src/BigNode.o
-
-# target to build an object file
-bus/src/BigNode.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/BigNode.cpp.o
-.PHONY : bus/src/BigNode.cpp.o
-
-bus/src/BigNode.i: bus/src/BigNode.cpp.i
-.PHONY : bus/src/BigNode.i
-
-# target to preprocess a source file
-bus/src/BigNode.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/BigNode.cpp.i
-.PHONY : bus/src/BigNode.cpp.i
-
-bus/src/BigNode.s: bus/src/BigNode.cpp.s
-.PHONY : bus/src/BigNode.s
-
-# target to generate assembly for a file
-bus/src/BigNode.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/BigNode.cpp.s
-.PHONY : bus/src/BigNode.cpp.s
-
-bus/src/Bridge.o: bus/src/Bridge.cpp.o
-.PHONY : bus/src/Bridge.o
-
-# target to build an object file
-bus/src/Bridge.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Bridge.cpp.o
-.PHONY : bus/src/Bridge.cpp.o
-
-bus/src/Bridge.i: bus/src/Bridge.cpp.i
-.PHONY : bus/src/Bridge.i
-
-# target to preprocess a source file
-bus/src/Bridge.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Bridge.cpp.i
-.PHONY : bus/src/Bridge.cpp.i
-
-bus/src/Bridge.s: bus/src/Bridge.cpp.s
-.PHONY : bus/src/Bridge.s
-
-# target to generate assembly for a file
-bus/src/Bridge.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Bridge.cpp.s
-.PHONY : bus/src/Bridge.cpp.s
-
-bus/src/ClientNode.o: bus/src/ClientNode.cpp.o
-.PHONY : bus/src/ClientNode.o
-
-# target to build an object file
-bus/src/ClientNode.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/ClientNode.cpp.o
-.PHONY : bus/src/ClientNode.cpp.o
-
-bus/src/ClientNode.i: bus/src/ClientNode.cpp.i
-.PHONY : bus/src/ClientNode.i
-
-# target to preprocess a source file
-bus/src/ClientNode.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/ClientNode.cpp.i
-.PHONY : bus/src/ClientNode.cpp.i
-
-bus/src/ClientNode.s: bus/src/ClientNode.cpp.s
-.PHONY : bus/src/ClientNode.s
-
-# target to generate assembly for a file
-bus/src/ClientNode.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/ClientNode.cpp.s
-.PHONY : bus/src/ClientNode.cpp.s
-
-bus/src/DefaultGlobalService.o: bus/src/DefaultGlobalService.cpp.o
-.PHONY : bus/src/DefaultGlobalService.o
-
-# target to build an object file
-bus/src/DefaultGlobalService.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/DefaultGlobalService.cpp.o
-.PHONY : bus/src/DefaultGlobalService.cpp.o
-
-bus/src/DefaultGlobalService.i: bus/src/DefaultGlobalService.cpp.i
-.PHONY : bus/src/DefaultGlobalService.i
-
-# target to preprocess a source file
-bus/src/DefaultGlobalService.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/DefaultGlobalService.cpp.i
-.PHONY : bus/src/DefaultGlobalService.cpp.i
-
-bus/src/DefaultGlobalService.s: bus/src/DefaultGlobalService.cpp.s
-.PHONY : bus/src/DefaultGlobalService.s
-
-# target to generate assembly for a file
-bus/src/DefaultGlobalService.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/DefaultGlobalService.cpp.s
-.PHONY : bus/src/DefaultGlobalService.cpp.s
-
-bus/src/DefaultService.o: bus/src/DefaultService.cpp.o
-.PHONY : bus/src/DefaultService.o
-
-# target to build an object file
-bus/src/DefaultService.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/DefaultService.cpp.o
-.PHONY : bus/src/DefaultService.cpp.o
-
-bus/src/DefaultService.i: bus/src/DefaultService.cpp.i
-.PHONY : bus/src/DefaultService.i
-
-# target to preprocess a source file
-bus/src/DefaultService.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/DefaultService.cpp.i
-.PHONY : bus/src/DefaultService.cpp.i
-
-bus/src/DefaultService.s: bus/src/DefaultService.cpp.s
-.PHONY : bus/src/DefaultService.s
-
-# target to generate assembly for a file
-bus/src/DefaultService.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/DefaultService.cpp.s
-.PHONY : bus/src/DefaultService.cpp.s
-
-bus/src/GlobalBusInit.o: bus/src/GlobalBusInit.cpp.o
-.PHONY : bus/src/GlobalBusInit.o
-
-# target to build an object file
-bus/src/GlobalBusInit.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/GlobalBusInit.cpp.o
-.PHONY : bus/src/GlobalBusInit.cpp.o
-
-bus/src/GlobalBusInit.i: bus/src/GlobalBusInit.cpp.i
-.PHONY : bus/src/GlobalBusInit.i
-
-# target to preprocess a source file
-bus/src/GlobalBusInit.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/GlobalBusInit.cpp.i
-.PHONY : bus/src/GlobalBusInit.cpp.i
-
-bus/src/GlobalBusInit.s: bus/src/GlobalBusInit.cpp.s
-.PHONY : bus/src/GlobalBusInit.s
-
-# target to generate assembly for a file
-bus/src/GlobalBusInit.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/GlobalBusInit.cpp.s
-.PHONY : bus/src/GlobalBusInit.cpp.s
-
-bus/src/INodeBusService.o: bus/src/INodeBusService.cpp.o
-.PHONY : bus/src/INodeBusService.o
-
-# target to build an object file
-bus/src/INodeBusService.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/INodeBusService.cpp.o
-.PHONY : bus/src/INodeBusService.cpp.o
-
-bus/src/INodeBusService.i: bus/src/INodeBusService.cpp.i
-.PHONY : bus/src/INodeBusService.i
-
-# target to preprocess a source file
-bus/src/INodeBusService.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/INodeBusService.cpp.i
-.PHONY : bus/src/INodeBusService.cpp.i
-
-bus/src/INodeBusService.s: bus/src/INodeBusService.cpp.s
-.PHONY : bus/src/INodeBusService.s
-
-# target to generate assembly for a file
-bus/src/INodeBusService.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/INodeBusService.cpp.s
-.PHONY : bus/src/INodeBusService.cpp.s
-
-bus/src/Lock.o: bus/src/Lock.cpp.o
-.PHONY : bus/src/Lock.o
-
-# target to build an object file
-bus/src/Lock.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Lock.cpp.o
-.PHONY : bus/src/Lock.cpp.o
-
-bus/src/Lock.i: bus/src/Lock.cpp.i
-.PHONY : bus/src/Lock.i
-
-# target to preprocess a source file
-bus/src/Lock.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Lock.cpp.i
-.PHONY : bus/src/Lock.cpp.i
-
-bus/src/Lock.s: bus/src/Lock.cpp.s
-.PHONY : bus/src/Lock.s
-
-# target to generate assembly for a file
-bus/src/Lock.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Lock.cpp.s
-.PHONY : bus/src/Lock.cpp.s
-
-bus/src/Log.o: bus/src/Log.cpp.o
-.PHONY : bus/src/Log.o
-
-# target to build an object file
-bus/src/Log.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Log.cpp.o
-.PHONY : bus/src/Log.cpp.o
-
-bus/src/Log.i: bus/src/Log.cpp.i
-.PHONY : bus/src/Log.i
-
-# target to preprocess a source file
-bus/src/Log.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Log.cpp.i
-.PHONY : bus/src/Log.cpp.i
-
-bus/src/Log.s: bus/src/Log.cpp.s
-.PHONY : bus/src/Log.s
-
-# target to generate assembly for a file
-bus/src/Log.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Log.cpp.s
-.PHONY : bus/src/Log.cpp.s
-
-bus/src/NodeLooper.o: bus/src/NodeLooper.cpp.o
-.PHONY : bus/src/NodeLooper.o
-
-# target to build an object file
-bus/src/NodeLooper.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodeLooper.cpp.o
-.PHONY : bus/src/NodeLooper.cpp.o
-
-bus/src/NodeLooper.i: bus/src/NodeLooper.cpp.i
-.PHONY : bus/src/NodeLooper.i
-
-# target to preprocess a source file
-bus/src/NodeLooper.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodeLooper.cpp.i
-.PHONY : bus/src/NodeLooper.cpp.i
-
-bus/src/NodeLooper.s: bus/src/NodeLooper.cpp.s
-.PHONY : bus/src/NodeLooper.s
-
-# target to generate assembly for a file
-bus/src/NodeLooper.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodeLooper.cpp.s
-.PHONY : bus/src/NodeLooper.cpp.s
-
-bus/src/NodeNetwork.o: bus/src/NodeNetwork.cpp.o
-.PHONY : bus/src/NodeNetwork.o
-
-# target to build an object file
-bus/src/NodeNetwork.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodeNetwork.cpp.o
-.PHONY : bus/src/NodeNetwork.cpp.o
-
-bus/src/NodeNetwork.i: bus/src/NodeNetwork.cpp.i
-.PHONY : bus/src/NodeNetwork.i
-
-# target to preprocess a source file
-bus/src/NodeNetwork.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodeNetwork.cpp.i
-.PHONY : bus/src/NodeNetwork.cpp.i
-
-bus/src/NodeNetwork.s: bus/src/NodeNetwork.cpp.s
-.PHONY : bus/src/NodeNetwork.s
-
-# target to generate assembly for a file
-bus/src/NodeNetwork.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodeNetwork.cpp.s
-.PHONY : bus/src/NodeNetwork.cpp.s
-
-bus/src/NodePort.o: bus/src/NodePort.cpp.o
-.PHONY : bus/src/NodePort.o
-
-# target to build an object file
-bus/src/NodePort.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodePort.cpp.o
-.PHONY : bus/src/NodePort.cpp.o
-
-bus/src/NodePort.i: bus/src/NodePort.cpp.i
-.PHONY : bus/src/NodePort.i
-
-# target to preprocess a source file
-bus/src/NodePort.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodePort.cpp.i
-.PHONY : bus/src/NodePort.cpp.i
-
-bus/src/NodePort.s: bus/src/NodePort.cpp.s
-.PHONY : bus/src/NodePort.s
-
-# target to generate assembly for a file
-bus/src/NodePort.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/NodePort.cpp.s
-.PHONY : bus/src/NodePort.cpp.s
-
-bus/src/Normalizer.o: bus/src/Normalizer.cpp.o
-.PHONY : bus/src/Normalizer.o
-
-# target to build an object file
-bus/src/Normalizer.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Normalizer.cpp.o
-.PHONY : bus/src/Normalizer.cpp.o
-
-bus/src/Normalizer.i: bus/src/Normalizer.cpp.i
-.PHONY : bus/src/Normalizer.i
-
-# target to preprocess a source file
-bus/src/Normalizer.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Normalizer.cpp.i
-.PHONY : bus/src/Normalizer.cpp.i
-
-bus/src/Normalizer.s: bus/src/Normalizer.cpp.s
-.PHONY : bus/src/Normalizer.s
-
-# target to generate assembly for a file
-bus/src/Normalizer.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Normalizer.cpp.s
-.PHONY : bus/src/Normalizer.cpp.s
-
-bus/src/Packet.o: bus/src/Packet.cpp.o
-.PHONY : bus/src/Packet.o
-
-# target to build an object file
-bus/src/Packet.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Packet.cpp.o
-.PHONY : bus/src/Packet.cpp.o
-
-bus/src/Packet.i: bus/src/Packet.cpp.i
-.PHONY : bus/src/Packet.i
-
-# target to preprocess a source file
-bus/src/Packet.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Packet.cpp.i
-.PHONY : bus/src/Packet.cpp.i
-
-bus/src/Packet.s: bus/src/Packet.cpp.s
-.PHONY : bus/src/Packet.s
-
-# target to generate assembly for a file
-bus/src/Packet.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Packet.cpp.s
-.PHONY : bus/src/Packet.cpp.s
-
-bus/src/Queue.o: bus/src/Queue.cpp.o
-.PHONY : bus/src/Queue.o
-
-# target to build an object file
-bus/src/Queue.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Queue.cpp.o
-.PHONY : bus/src/Queue.cpp.o
-
-bus/src/Queue.i: bus/src/Queue.cpp.i
-.PHONY : bus/src/Queue.i
-
-# target to preprocess a source file
-bus/src/Queue.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Queue.cpp.i
-.PHONY : bus/src/Queue.cpp.i
-
-bus/src/Queue.s: bus/src/Queue.cpp.s
-.PHONY : bus/src/Queue.s
-
-# target to generate assembly for a file
-bus/src/Queue.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/Queue.cpp.s
-.PHONY : bus/src/Queue.cpp.s
-
-bus/src/XMLParser.o: bus/src/XMLParser.cpp.o
-.PHONY : bus/src/XMLParser.o
-
-# target to build an object file
-bus/src/XMLParser.cpp.o:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/XMLParser.cpp.o
-.PHONY : bus/src/XMLParser.cpp.o
-
-bus/src/XMLParser.i: bus/src/XMLParser.cpp.i
-.PHONY : bus/src/XMLParser.i
-
-# target to preprocess a source file
-bus/src/XMLParser.cpp.i:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/XMLParser.cpp.i
-.PHONY : bus/src/XMLParser.cpp.i
-
-bus/src/XMLParser.s: bus/src/XMLParser.cpp.s
-.PHONY : bus/src/XMLParser.s
-
-# target to generate assembly for a file
-bus/src/XMLParser.cpp.s:
-	$(MAKE) -f CMakeFiles/nodebus.dir/build.make CMakeFiles/nodebus.dir/bus/src/XMLParser.cpp.s
-.PHONY : bus/src/XMLParser.cpp.s
 
 # Help Target
 help:
@@ -502,56 +237,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... nodebus"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... bus/src/BigNode.o"
-	@echo "... bus/src/BigNode.i"
-	@echo "... bus/src/BigNode.s"
-	@echo "... bus/src/Bridge.o"
-	@echo "... bus/src/Bridge.i"
-	@echo "... bus/src/Bridge.s"
-	@echo "... bus/src/ClientNode.o"
-	@echo "... bus/src/ClientNode.i"
-	@echo "... bus/src/ClientNode.s"
-	@echo "... bus/src/DefaultGlobalService.o"
-	@echo "... bus/src/DefaultGlobalService.i"
-	@echo "... bus/src/DefaultGlobalService.s"
-	@echo "... bus/src/DefaultService.o"
-	@echo "... bus/src/DefaultService.i"
-	@echo "... bus/src/DefaultService.s"
-	@echo "... bus/src/GlobalBusInit.o"
-	@echo "... bus/src/GlobalBusInit.i"
-	@echo "... bus/src/GlobalBusInit.s"
-	@echo "... bus/src/INodeBusService.o"
-	@echo "... bus/src/INodeBusService.i"
-	@echo "... bus/src/INodeBusService.s"
-	@echo "... bus/src/Lock.o"
-	@echo "... bus/src/Lock.i"
-	@echo "... bus/src/Lock.s"
-	@echo "... bus/src/Log.o"
-	@echo "... bus/src/Log.i"
-	@echo "... bus/src/Log.s"
-	@echo "... bus/src/NodeLooper.o"
-	@echo "... bus/src/NodeLooper.i"
-	@echo "... bus/src/NodeLooper.s"
-	@echo "... bus/src/NodeNetwork.o"
-	@echo "... bus/src/NodeNetwork.i"
-	@echo "... bus/src/NodeNetwork.s"
-	@echo "... bus/src/NodePort.o"
-	@echo "... bus/src/NodePort.i"
-	@echo "... bus/src/NodePort.s"
-	@echo "... bus/src/Normalizer.o"
-	@echo "... bus/src/Normalizer.i"
-	@echo "... bus/src/Normalizer.s"
-	@echo "... bus/src/Packet.o"
-	@echo "... bus/src/Packet.i"
-	@echo "... bus/src/Packet.s"
-	@echo "... bus/src/Queue.o"
-	@echo "... bus/src/Queue.i"
-	@echo "... bus/src/Queue.s"
-	@echo "... bus/src/XMLParser.o"
-	@echo "... bus/src/XMLParser.i"
-	@echo "... bus/src/XMLParser.s"
+	@echo "... jsoncpp_lib_static"
+	@echo "... jsoncpp_check"
+	@echo "... jsoncpp_readerwriter_tests"
+	@echo "... jsontestrunner_exe"
+	@echo "... jsoncpp_test"
+	@echo "... nb"
+	@echo "... nodebus"
 .PHONY : help
 
 
