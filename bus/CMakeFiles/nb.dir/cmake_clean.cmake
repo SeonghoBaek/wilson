@@ -1,4 +1,4 @@
-FILE(REMOVE_RECURSE
+file(REMOVE_RECURSE
   "CMakeFiles/nb.dir/src/BigNode.cpp.o"
   "CMakeFiles/nb.dir/src/Bridge.cpp.o"
   "CMakeFiles/nb.dir/src/ClientNode.cpp.o"
@@ -16,10 +16,10 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/nb.dir/src/Queue.cpp.o"
   "CMakeFiles/nb.dir/src/XMLParser.cpp.o"
   "libnb.pdb"
-  "libnb.so"
+  "libnb.dylib"
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/nb.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang CXX)
+  include(CMakeFiles/nb.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

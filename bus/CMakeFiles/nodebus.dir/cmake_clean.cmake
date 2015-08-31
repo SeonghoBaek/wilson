@@ -1,4 +1,4 @@
-FILE(REMOVE_RECURSE
+file(REMOVE_RECURSE
   "CMakeFiles/nodebus.dir/src/BigNode.cpp.o"
   "CMakeFiles/nodebus.dir/src/Bridge.cpp.o"
   "CMakeFiles/nodebus.dir/src/ClientNode.cpp.o"
@@ -20,6 +20,6 @@ FILE(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/nodebus.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang CXX)
+  include(CMakeFiles/nodebus.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
