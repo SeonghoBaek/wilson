@@ -456,7 +456,7 @@ bus/nodebus: bus/CMakeFiles/nodebus.dir/src/Packet.cpp.o
 bus/nodebus: bus/CMakeFiles/nodebus.dir/src/Queue.cpp.o
 bus/nodebus: bus/CMakeFiles/nodebus.dir/src/XMLParser.cpp.o
 bus/nodebus: bus/CMakeFiles/nodebus.dir/build.make
-bus/nodebus: external/jsoncpp/src/lib_json/libjsoncpp.a
+bus/nodebus: external/jsoncpp/src/lib_json/libjsoncpp.dylib
 bus/nodebus: bus/CMakeFiles/nodebus.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable nodebus"
 	cd /Users/major/workspace/wilson/bus && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nodebus.dir/link.txt --verbose=$(VERBOSE)

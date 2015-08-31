@@ -78,5 +78,3 @@ IF(BUILD_STATIC_LIBS)
      ENDIF()
 
 ENDIF()
-
-INSTALL_TARGETS(${CMAKE_SOURCE_DIR}/lib jsoncpp_lib_static)

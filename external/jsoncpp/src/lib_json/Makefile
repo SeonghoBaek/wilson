@@ -143,25 +143,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/rule:
-	cd /Users/major/workspace/wilson && $(MAKE) -f CMakeFiles/Makefile2 external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/rule
-.PHONY : external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/rule
+external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/rule:
+	cd /Users/major/workspace/wilson && $(MAKE) -f CMakeFiles/Makefile2 external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/rule
+.PHONY : external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/rule
 
 # Convenience name for target.
-jsoncpp_lib_static: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/rule
-.PHONY : jsoncpp_lib_static
+jsoncpp_lib: external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/rule
+.PHONY : jsoncpp_lib
 
 # fast build rule for target.
-jsoncpp_lib_static/fast:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build
-.PHONY : jsoncpp_lib_static/fast
+jsoncpp_lib/fast:
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build
+.PHONY : jsoncpp_lib/fast
 
 json_reader.o: json_reader.cpp.o
 .PHONY : json_reader.o
 
 # target to build an object file
 json_reader.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_reader.cpp.o
 .PHONY : json_reader.cpp.o
 
 json_reader.i: json_reader.cpp.i
@@ -169,7 +169,7 @@ json_reader.i: json_reader.cpp.i
 
 # target to preprocess a source file
 json_reader.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_reader.cpp.i
 .PHONY : json_reader.cpp.i
 
 json_reader.s: json_reader.cpp.s
@@ -177,7 +177,7 @@ json_reader.s: json_reader.cpp.s
 
 # target to generate assembly for a file
 json_reader.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_reader.cpp.s
 .PHONY : json_reader.cpp.s
 
 json_value.o: json_value.cpp.o
@@ -185,7 +185,7 @@ json_value.o: json_value.cpp.o
 
 # target to build an object file
 json_value.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_value.cpp.o
 .PHONY : json_value.cpp.o
 
 json_value.i: json_value.cpp.i
@@ -193,7 +193,7 @@ json_value.i: json_value.cpp.i
 
 # target to preprocess a source file
 json_value.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_value.cpp.i
 .PHONY : json_value.cpp.i
 
 json_value.s: json_value.cpp.s
@@ -201,7 +201,7 @@ json_value.s: json_value.cpp.s
 
 # target to generate assembly for a file
 json_value.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_value.cpp.s
 .PHONY : json_value.cpp.s
 
 json_writer.o: json_writer.cpp.o
@@ -209,7 +209,7 @@ json_writer.o: json_writer.cpp.o
 
 # target to build an object file
 json_writer.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_writer.cpp.o
 .PHONY : json_writer.cpp.o
 
 json_writer.i: json_writer.cpp.i
@@ -217,7 +217,7 @@ json_writer.i: json_writer.cpp.i
 
 # target to preprocess a source file
 json_writer.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_writer.cpp.i
 .PHONY : json_writer.cpp.i
 
 json_writer.s: json_writer.cpp.s
@@ -225,7 +225,7 @@ json_writer.s: json_writer.cpp.s
 
 # target to generate assembly for a file
 json_writer.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/build.make external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/json_writer.cpp.s
 .PHONY : json_writer.cpp.s
 
 # Help Target
@@ -234,11 +234,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... jsoncpp_lib"
 	@echo "... install/strip"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... jsoncpp_lib_static"
 	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... json_reader.o"
