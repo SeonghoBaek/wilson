@@ -156,17 +156,30 @@ jsoncpp_lib/fast:
 .PHONY : jsoncpp_lib/fast
 
 #=============================================================================
-# Target rules for targets named nodebus
+# Target rules for targets named wilson
 
 # Build rule for target.
-nodebus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nodebus
-.PHONY : nodebus
+wilson: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wilson
+.PHONY : wilson
 
 # fast build rule for target.
-nodebus/fast:
-	$(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/build
-.PHONY : nodebus/fast
+wilson/fast:
+	$(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/build
+.PHONY : wilson/fast
+
+#=============================================================================
+# Target rules for targets named wilson_client
+
+# Build rule for target.
+wilson_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wilson_client
+.PHONY : wilson_client
+
+# fast build rule for target.
+wilson_client/fast:
+	$(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/build
+.PHONY : wilson_client/fast
 
 # Help Target
 help:
@@ -181,7 +194,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... jsoncpp_lib"
-	@echo "... nodebus"
+	@echo "... wilson"
+	@echo "... wilson_client"
 .PHONY : help
 
 

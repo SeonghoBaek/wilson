@@ -143,25 +143,40 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-bus/CMakeFiles/nodebus.dir/rule:
-	cd /Users/major/workspace/wilson && $(MAKE) -f CMakeFiles/Makefile2 bus/CMakeFiles/nodebus.dir/rule
-.PHONY : bus/CMakeFiles/nodebus.dir/rule
+bus/CMakeFiles/wilson.dir/rule:
+	cd /Users/major/workspace/wilson && $(MAKE) -f CMakeFiles/Makefile2 bus/CMakeFiles/wilson.dir/rule
+.PHONY : bus/CMakeFiles/wilson.dir/rule
 
 # Convenience name for target.
-nodebus: bus/CMakeFiles/nodebus.dir/rule
-.PHONY : nodebus
+wilson: bus/CMakeFiles/wilson.dir/rule
+.PHONY : wilson
 
 # fast build rule for target.
-nodebus/fast:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/build
-.PHONY : nodebus/fast
+wilson/fast:
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/build
+.PHONY : wilson/fast
+
+# Convenience name for target.
+bus/CMakeFiles/wilson_client.dir/rule:
+	cd /Users/major/workspace/wilson && $(MAKE) -f CMakeFiles/Makefile2 bus/CMakeFiles/wilson_client.dir/rule
+.PHONY : bus/CMakeFiles/wilson_client.dir/rule
+
+# Convenience name for target.
+wilson_client: bus/CMakeFiles/wilson_client.dir/rule
+.PHONY : wilson_client
+
+# fast build rule for target.
+wilson_client/fast:
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/build
+.PHONY : wilson_client/fast
 
 src/BigNode.o: src/BigNode.cpp.o
 .PHONY : src/BigNode.o
 
 # target to build an object file
 src/BigNode.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/BigNode.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/BigNode.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/BigNode.cpp.o
 .PHONY : src/BigNode.cpp.o
 
 src/BigNode.i: src/BigNode.cpp.i
@@ -169,7 +184,8 @@ src/BigNode.i: src/BigNode.cpp.i
 
 # target to preprocess a source file
 src/BigNode.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/BigNode.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/BigNode.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/BigNode.cpp.i
 .PHONY : src/BigNode.cpp.i
 
 src/BigNode.s: src/BigNode.cpp.s
@@ -177,7 +193,8 @@ src/BigNode.s: src/BigNode.cpp.s
 
 # target to generate assembly for a file
 src/BigNode.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/BigNode.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/BigNode.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/BigNode.cpp.s
 .PHONY : src/BigNode.cpp.s
 
 src/Bridge.o: src/Bridge.cpp.o
@@ -185,7 +202,8 @@ src/Bridge.o: src/Bridge.cpp.o
 
 # target to build an object file
 src/Bridge.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Bridge.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Bridge.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Bridge.cpp.o
 .PHONY : src/Bridge.cpp.o
 
 src/Bridge.i: src/Bridge.cpp.i
@@ -193,7 +211,8 @@ src/Bridge.i: src/Bridge.cpp.i
 
 # target to preprocess a source file
 src/Bridge.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Bridge.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Bridge.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Bridge.cpp.i
 .PHONY : src/Bridge.cpp.i
 
 src/Bridge.s: src/Bridge.cpp.s
@@ -201,7 +220,8 @@ src/Bridge.s: src/Bridge.cpp.s
 
 # target to generate assembly for a file
 src/Bridge.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Bridge.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Bridge.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Bridge.cpp.s
 .PHONY : src/Bridge.cpp.s
 
 src/ClientNode.o: src/ClientNode.cpp.o
@@ -209,7 +229,8 @@ src/ClientNode.o: src/ClientNode.cpp.o
 
 # target to build an object file
 src/ClientNode.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/ClientNode.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/ClientNode.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/ClientNode.cpp.o
 .PHONY : src/ClientNode.cpp.o
 
 src/ClientNode.i: src/ClientNode.cpp.i
@@ -217,7 +238,8 @@ src/ClientNode.i: src/ClientNode.cpp.i
 
 # target to preprocess a source file
 src/ClientNode.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/ClientNode.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/ClientNode.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/ClientNode.cpp.i
 .PHONY : src/ClientNode.cpp.i
 
 src/ClientNode.s: src/ClientNode.cpp.s
@@ -225,7 +247,8 @@ src/ClientNode.s: src/ClientNode.cpp.s
 
 # target to generate assembly for a file
 src/ClientNode.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/ClientNode.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/ClientNode.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/ClientNode.cpp.s
 .PHONY : src/ClientNode.cpp.s
 
 src/DefaultGlobalService.o: src/DefaultGlobalService.cpp.o
@@ -233,7 +256,8 @@ src/DefaultGlobalService.o: src/DefaultGlobalService.cpp.o
 
 # target to build an object file
 src/DefaultGlobalService.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/DefaultGlobalService.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/DefaultGlobalService.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/DefaultGlobalService.cpp.o
 .PHONY : src/DefaultGlobalService.cpp.o
 
 src/DefaultGlobalService.i: src/DefaultGlobalService.cpp.i
@@ -241,7 +265,8 @@ src/DefaultGlobalService.i: src/DefaultGlobalService.cpp.i
 
 # target to preprocess a source file
 src/DefaultGlobalService.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/DefaultGlobalService.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/DefaultGlobalService.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/DefaultGlobalService.cpp.i
 .PHONY : src/DefaultGlobalService.cpp.i
 
 src/DefaultGlobalService.s: src/DefaultGlobalService.cpp.s
@@ -249,7 +274,8 @@ src/DefaultGlobalService.s: src/DefaultGlobalService.cpp.s
 
 # target to generate assembly for a file
 src/DefaultGlobalService.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/DefaultGlobalService.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/DefaultGlobalService.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/DefaultGlobalService.cpp.s
 .PHONY : src/DefaultGlobalService.cpp.s
 
 src/DefaultService.o: src/DefaultService.cpp.o
@@ -257,7 +283,8 @@ src/DefaultService.o: src/DefaultService.cpp.o
 
 # target to build an object file
 src/DefaultService.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/DefaultService.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/DefaultService.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/DefaultService.cpp.o
 .PHONY : src/DefaultService.cpp.o
 
 src/DefaultService.i: src/DefaultService.cpp.i
@@ -265,7 +292,8 @@ src/DefaultService.i: src/DefaultService.cpp.i
 
 # target to preprocess a source file
 src/DefaultService.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/DefaultService.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/DefaultService.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/DefaultService.cpp.i
 .PHONY : src/DefaultService.cpp.i
 
 src/DefaultService.s: src/DefaultService.cpp.s
@@ -273,7 +301,8 @@ src/DefaultService.s: src/DefaultService.cpp.s
 
 # target to generate assembly for a file
 src/DefaultService.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/DefaultService.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/DefaultService.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/DefaultService.cpp.s
 .PHONY : src/DefaultService.cpp.s
 
 src/GlobalBusInit.o: src/GlobalBusInit.cpp.o
@@ -281,7 +310,7 @@ src/GlobalBusInit.o: src/GlobalBusInit.cpp.o
 
 # target to build an object file
 src/GlobalBusInit.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/GlobalBusInit.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/GlobalBusInit.cpp.o
 .PHONY : src/GlobalBusInit.cpp.o
 
 src/GlobalBusInit.i: src/GlobalBusInit.cpp.i
@@ -289,7 +318,7 @@ src/GlobalBusInit.i: src/GlobalBusInit.cpp.i
 
 # target to preprocess a source file
 src/GlobalBusInit.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/GlobalBusInit.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/GlobalBusInit.cpp.i
 .PHONY : src/GlobalBusInit.cpp.i
 
 src/GlobalBusInit.s: src/GlobalBusInit.cpp.s
@@ -297,7 +326,7 @@ src/GlobalBusInit.s: src/GlobalBusInit.cpp.s
 
 # target to generate assembly for a file
 src/GlobalBusInit.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/GlobalBusInit.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/GlobalBusInit.cpp.s
 .PHONY : src/GlobalBusInit.cpp.s
 
 src/INodeBusService.o: src/INodeBusService.cpp.o
@@ -305,7 +334,8 @@ src/INodeBusService.o: src/INodeBusService.cpp.o
 
 # target to build an object file
 src/INodeBusService.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/INodeBusService.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/INodeBusService.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/INodeBusService.cpp.o
 .PHONY : src/INodeBusService.cpp.o
 
 src/INodeBusService.i: src/INodeBusService.cpp.i
@@ -313,7 +343,8 @@ src/INodeBusService.i: src/INodeBusService.cpp.i
 
 # target to preprocess a source file
 src/INodeBusService.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/INodeBusService.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/INodeBusService.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/INodeBusService.cpp.i
 .PHONY : src/INodeBusService.cpp.i
 
 src/INodeBusService.s: src/INodeBusService.cpp.s
@@ -321,15 +352,41 @@ src/INodeBusService.s: src/INodeBusService.cpp.s
 
 # target to generate assembly for a file
 src/INodeBusService.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/INodeBusService.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/INodeBusService.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/INodeBusService.cpp.s
 .PHONY : src/INodeBusService.cpp.s
+
+src/LocalBusInit.o: src/LocalBusInit.cpp.o
+.PHONY : src/LocalBusInit.o
+
+# target to build an object file
+src/LocalBusInit.cpp.o:
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/LocalBusInit.cpp.o
+.PHONY : src/LocalBusInit.cpp.o
+
+src/LocalBusInit.i: src/LocalBusInit.cpp.i
+.PHONY : src/LocalBusInit.i
+
+# target to preprocess a source file
+src/LocalBusInit.cpp.i:
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/LocalBusInit.cpp.i
+.PHONY : src/LocalBusInit.cpp.i
+
+src/LocalBusInit.s: src/LocalBusInit.cpp.s
+.PHONY : src/LocalBusInit.s
+
+# target to generate assembly for a file
+src/LocalBusInit.cpp.s:
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/LocalBusInit.cpp.s
+.PHONY : src/LocalBusInit.cpp.s
 
 src/Lock.o: src/Lock.cpp.o
 .PHONY : src/Lock.o
 
 # target to build an object file
 src/Lock.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Lock.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Lock.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Lock.cpp.o
 .PHONY : src/Lock.cpp.o
 
 src/Lock.i: src/Lock.cpp.i
@@ -337,7 +394,8 @@ src/Lock.i: src/Lock.cpp.i
 
 # target to preprocess a source file
 src/Lock.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Lock.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Lock.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Lock.cpp.i
 .PHONY : src/Lock.cpp.i
 
 src/Lock.s: src/Lock.cpp.s
@@ -345,7 +403,8 @@ src/Lock.s: src/Lock.cpp.s
 
 # target to generate assembly for a file
 src/Lock.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Lock.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Lock.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Lock.cpp.s
 .PHONY : src/Lock.cpp.s
 
 src/Log.o: src/Log.cpp.o
@@ -353,7 +412,8 @@ src/Log.o: src/Log.cpp.o
 
 # target to build an object file
 src/Log.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Log.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Log.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Log.cpp.o
 .PHONY : src/Log.cpp.o
 
 src/Log.i: src/Log.cpp.i
@@ -361,7 +421,8 @@ src/Log.i: src/Log.cpp.i
 
 # target to preprocess a source file
 src/Log.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Log.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Log.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Log.cpp.i
 .PHONY : src/Log.cpp.i
 
 src/Log.s: src/Log.cpp.s
@@ -369,7 +430,8 @@ src/Log.s: src/Log.cpp.s
 
 # target to generate assembly for a file
 src/Log.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Log.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Log.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Log.cpp.s
 .PHONY : src/Log.cpp.s
 
 src/NodeLooper.o: src/NodeLooper.cpp.o
@@ -377,7 +439,8 @@ src/NodeLooper.o: src/NodeLooper.cpp.o
 
 # target to build an object file
 src/NodeLooper.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodeLooper.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodeLooper.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodeLooper.cpp.o
 .PHONY : src/NodeLooper.cpp.o
 
 src/NodeLooper.i: src/NodeLooper.cpp.i
@@ -385,7 +448,8 @@ src/NodeLooper.i: src/NodeLooper.cpp.i
 
 # target to preprocess a source file
 src/NodeLooper.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodeLooper.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodeLooper.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodeLooper.cpp.i
 .PHONY : src/NodeLooper.cpp.i
 
 src/NodeLooper.s: src/NodeLooper.cpp.s
@@ -393,7 +457,8 @@ src/NodeLooper.s: src/NodeLooper.cpp.s
 
 # target to generate assembly for a file
 src/NodeLooper.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodeLooper.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodeLooper.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodeLooper.cpp.s
 .PHONY : src/NodeLooper.cpp.s
 
 src/NodeNetwork.o: src/NodeNetwork.cpp.o
@@ -401,7 +466,8 @@ src/NodeNetwork.o: src/NodeNetwork.cpp.o
 
 # target to build an object file
 src/NodeNetwork.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodeNetwork.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodeNetwork.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodeNetwork.cpp.o
 .PHONY : src/NodeNetwork.cpp.o
 
 src/NodeNetwork.i: src/NodeNetwork.cpp.i
@@ -409,7 +475,8 @@ src/NodeNetwork.i: src/NodeNetwork.cpp.i
 
 # target to preprocess a source file
 src/NodeNetwork.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodeNetwork.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodeNetwork.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodeNetwork.cpp.i
 .PHONY : src/NodeNetwork.cpp.i
 
 src/NodeNetwork.s: src/NodeNetwork.cpp.s
@@ -417,7 +484,8 @@ src/NodeNetwork.s: src/NodeNetwork.cpp.s
 
 # target to generate assembly for a file
 src/NodeNetwork.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodeNetwork.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodeNetwork.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodeNetwork.cpp.s
 .PHONY : src/NodeNetwork.cpp.s
 
 src/NodePort.o: src/NodePort.cpp.o
@@ -425,7 +493,8 @@ src/NodePort.o: src/NodePort.cpp.o
 
 # target to build an object file
 src/NodePort.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodePort.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodePort.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodePort.cpp.o
 .PHONY : src/NodePort.cpp.o
 
 src/NodePort.i: src/NodePort.cpp.i
@@ -433,7 +502,8 @@ src/NodePort.i: src/NodePort.cpp.i
 
 # target to preprocess a source file
 src/NodePort.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodePort.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodePort.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodePort.cpp.i
 .PHONY : src/NodePort.cpp.i
 
 src/NodePort.s: src/NodePort.cpp.s
@@ -441,7 +511,8 @@ src/NodePort.s: src/NodePort.cpp.s
 
 # target to generate assembly for a file
 src/NodePort.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/NodePort.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/NodePort.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/NodePort.cpp.s
 .PHONY : src/NodePort.cpp.s
 
 src/Normalizer.o: src/Normalizer.cpp.o
@@ -449,7 +520,8 @@ src/Normalizer.o: src/Normalizer.cpp.o
 
 # target to build an object file
 src/Normalizer.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Normalizer.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Normalizer.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Normalizer.cpp.o
 .PHONY : src/Normalizer.cpp.o
 
 src/Normalizer.i: src/Normalizer.cpp.i
@@ -457,7 +529,8 @@ src/Normalizer.i: src/Normalizer.cpp.i
 
 # target to preprocess a source file
 src/Normalizer.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Normalizer.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Normalizer.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Normalizer.cpp.i
 .PHONY : src/Normalizer.cpp.i
 
 src/Normalizer.s: src/Normalizer.cpp.s
@@ -465,7 +538,8 @@ src/Normalizer.s: src/Normalizer.cpp.s
 
 # target to generate assembly for a file
 src/Normalizer.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Normalizer.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Normalizer.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Normalizer.cpp.s
 .PHONY : src/Normalizer.cpp.s
 
 src/Packet.o: src/Packet.cpp.o
@@ -473,7 +547,8 @@ src/Packet.o: src/Packet.cpp.o
 
 # target to build an object file
 src/Packet.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Packet.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Packet.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Packet.cpp.o
 .PHONY : src/Packet.cpp.o
 
 src/Packet.i: src/Packet.cpp.i
@@ -481,7 +556,8 @@ src/Packet.i: src/Packet.cpp.i
 
 # target to preprocess a source file
 src/Packet.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Packet.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Packet.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Packet.cpp.i
 .PHONY : src/Packet.cpp.i
 
 src/Packet.s: src/Packet.cpp.s
@@ -489,7 +565,8 @@ src/Packet.s: src/Packet.cpp.s
 
 # target to generate assembly for a file
 src/Packet.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Packet.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Packet.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Packet.cpp.s
 .PHONY : src/Packet.cpp.s
 
 src/Queue.o: src/Queue.cpp.o
@@ -497,7 +574,8 @@ src/Queue.o: src/Queue.cpp.o
 
 # target to build an object file
 src/Queue.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Queue.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Queue.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Queue.cpp.o
 .PHONY : src/Queue.cpp.o
 
 src/Queue.i: src/Queue.cpp.i
@@ -505,7 +583,8 @@ src/Queue.i: src/Queue.cpp.i
 
 # target to preprocess a source file
 src/Queue.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Queue.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Queue.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Queue.cpp.i
 .PHONY : src/Queue.cpp.i
 
 src/Queue.s: src/Queue.cpp.s
@@ -513,7 +592,8 @@ src/Queue.s: src/Queue.cpp.s
 
 # target to generate assembly for a file
 src/Queue.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/Queue.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/Queue.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/Queue.cpp.s
 .PHONY : src/Queue.cpp.s
 
 src/XMLParser.o: src/XMLParser.cpp.o
@@ -521,7 +601,8 @@ src/XMLParser.o: src/XMLParser.cpp.o
 
 # target to build an object file
 src/XMLParser.cpp.o:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/XMLParser.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/XMLParser.cpp.o
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/XMLParser.cpp.o
 .PHONY : src/XMLParser.cpp.o
 
 src/XMLParser.i: src/XMLParser.cpp.i
@@ -529,7 +610,8 @@ src/XMLParser.i: src/XMLParser.cpp.i
 
 # target to preprocess a source file
 src/XMLParser.cpp.i:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/XMLParser.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/XMLParser.cpp.i
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/XMLParser.cpp.i
 .PHONY : src/XMLParser.cpp.i
 
 src/XMLParser.s: src/XMLParser.cpp.s
@@ -537,7 +619,8 @@ src/XMLParser.s: src/XMLParser.cpp.s
 
 # target to generate assembly for a file
 src/XMLParser.cpp.s:
-	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/nodebus.dir/build.make bus/CMakeFiles/nodebus.dir/src/XMLParser.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson.dir/build.make bus/CMakeFiles/wilson.dir/src/XMLParser.cpp.s
+	cd /Users/major/workspace/wilson && $(MAKE) -f bus/CMakeFiles/wilson_client.dir/build.make bus/CMakeFiles/wilson_client.dir/src/XMLParser.cpp.s
 .PHONY : src/XMLParser.cpp.s
 
 # Help Target
@@ -547,10 +630,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... wilson"
+	@echo "... wilson_client"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... nodebus"
 	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... src/BigNode.o"
@@ -574,6 +658,9 @@ help:
 	@echo "... src/INodeBusService.o"
 	@echo "... src/INodeBusService.i"
 	@echo "... src/INodeBusService.s"
+	@echo "... src/LocalBusInit.o"
+	@echo "... src/LocalBusInit.i"
+	@echo "... src/LocalBusInit.s"
 	@echo "... src/Lock.o"
 	@echo "... src/Lock.i"
 	@echo "... src/Lock.s"

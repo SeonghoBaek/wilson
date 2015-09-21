@@ -237,10 +237,16 @@ jsoncpp_SOURCE_DIR:STATIC=/Users/major/workspace/wilson/external/jsoncpp
 jsoncpp_lib_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
-nodebus_BINARY_DIR:STATIC=/Users/major/workspace/wilson/bus
+nodebus_BINARY_DIR:STATIC=/Users/major/workspace/wilson
 
 //Value Computed by CMake
-nodebus_SOURCE_DIR:STATIC=/Users/major/workspace/wilson/bus
+nodebus_SOURCE_DIR:STATIC=/Users/major/workspace/wilson
+
+//Value Computed by CMake
+wilson_BINARY_DIR:STATIC=/Users/major/workspace/wilson/bus
+
+//Value Computed by CMake
+wilson_SOURCE_DIR:STATIC=/Users/major/workspace/wilson/bus
 
 
 ########################

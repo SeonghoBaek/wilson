@@ -1,2 +1,3 @@
 /Users/major/workspace/wilson/external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir
-/Users/major/workspace/wilson/bus/CMakeFiles/nodebus.dir
+/Users/major/workspace/wilson/bus/CMakeFiles/wilson.dir
+/Users/major/workspace/wilson/bus/CMakeFiles/wilson_client.dir

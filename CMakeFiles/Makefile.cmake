@@ -57,5 +57,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "external/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir/DependInfo.cmake"
-  "bus/CMakeFiles/nodebus.dir/DependInfo.cmake"
+  "bus/CMakeFiles/wilson.dir/DependInfo.cmake"
+  "bus/CMakeFiles/wilson_client.dir/DependInfo.cmake"
   )

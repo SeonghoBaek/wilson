@@ -141,7 +141,7 @@ int nodeCallback(void *data, unsigned int length, int type)
 
 int main()
 {
-	logFd = open("/opt/log/test.log", O_RDONLY, 0755);
+	logFd = open("/tmp/log/test.log", O_RDONLY, 0755);
 
     /* Craete NodeBus Node with NodeAdapter Class */
 	NodeAdapter* pNodeAdapter = NodeBus::createLocalNodeAdapter(ATM_NODE_NAME, nodeCallback);

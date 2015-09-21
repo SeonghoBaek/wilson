@@ -318,7 +318,9 @@ int ServerNodePort::waitNodeConnection()
 		return sock;
 	}
 
-	for (;;)
+	int loop = 1;
+
+	while (loop == 1)
 	{
         ClientAddress_t addr;
         char logFileName[LOG_FILE_NAME_LENGTH];
