@@ -4,7 +4,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var nbus = require('nodebus');
+var nbus = require('./nodebus');
 
 var NODE_NAME = "wilson.node";
 var BIGNODE_NAME = "bignode.node";

@@ -3,7 +3,7 @@
  */
 var mongoose = require('mongoose');
 var textSearch = require('mongoose-text-search');
-var nbus = require('nodebus');
+var nbus = require('./nodebus');
 var schema = require('./mgs_schema');
 
 var NODE_NAME = "socketio.node";

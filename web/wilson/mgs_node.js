@@ -1,4 +1,4 @@
-var nbus = require('nodebus');
+var nbus = require('./nodebus');
 var db = require('./mgs');
 
 var MGS_NODE_NAME = "mgs.node";
