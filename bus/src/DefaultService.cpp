@@ -47,8 +47,6 @@ int DefaultService::Coordinator::localAction(void *data, unsigned int length, in
 
 void DefaultService::Dispatcher::thread()
 {
-	this->mpOwner->mpLooper = new NodeLooper(this);
-
 	this->mpOwner->mpLooper->wait(-1); // Loop.
 }
 
@@ -88,7 +86,7 @@ void DefaultService::setupService(const char *serviceName)
 
 	LOGI("Create NodeLooper\n");
 
-	mpLooper = NULL;
+    mpLooper = new NodeLooper(mpDispatcher);
 }
 
 DefaultService::DefaultService()
