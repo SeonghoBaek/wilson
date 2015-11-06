@@ -374,7 +374,7 @@ int NodeNetwork::sendNodeMessage(const char *pNodeName, const void *data, unsign
 #endif
 		if (connect(localSocket, (struct sockaddr*) &address, addressLength) < 0)
 		{
-			LOGE("Local Socket Connect Error\n");
+			//LOGE("Local Socket Connect Error\n");
 			close(localSocket);
 
 			return -1;

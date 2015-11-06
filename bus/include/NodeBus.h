@@ -339,6 +339,8 @@ class NodeAdapter
 				LOGD("Wait NodeAdpater Setup..");
 				sleep(1);
 			}
+
+			LOGD("NodeAdapter for %s setup done.", this->getNode()->getNamespace());
 		}
 
 		void setNodeName(const char *pNodeName)

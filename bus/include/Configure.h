@@ -20,7 +20,7 @@
 */
 #define DOMAIN_PREFIX "/var/tmp/"
 
-#define LOG_DIR "/tmp/log/"
+#define LOG_DIR "/Volumes/User/log/"
 
 #define TMP_DIR "/tmp/"
 
@@ -30,11 +30,11 @@
 
 #define INFO_EXT ".info"
 
-#define VEC_DIR "/tmp/log/"
+#define VEC_DIR "/Volumes/User/log/"
 
 #define VEC_FILE_NAME "vector.def"
 
-#define SERVER_CONF_DIR "/tmp/log/"
+#define SERVER_CONF_DIR "/Volumes/User/log/"
 
 #define SERVER_CONF_FILE_NAME "server.conf"
 

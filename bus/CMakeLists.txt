@@ -3,7 +3,6 @@ project(wilson)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
 include_directories(include)
-include_directories(${CMAKE_SOURCE_DIR}/external/jsoncpp/include)
 include_directories(/usr/include/libxml2)
 
 set(SOURCE_FILES
@@ -90,11 +89,5 @@ set(HEADER_FILES
 add_executable(wilson ${SOURCE_FILES} ${HEADER_FILES})
 
 add_executable(wilson_client ${CLIENT_SOURCE_FILES} ${HEADER_FILES})
-
-find_library(LIBJSONCPP_LIBRARIES NAMES libjsoncpp jsoncpp
-        HINTS ${CMAKE_SOURCE_DIR}/external/jsoncpp/src/lib_json )
-
-set(LIBJSONCPP ${LIBJSONCPP_LIBRARIES} )
-
-target_link_libraries(wilson xml2 ${LIBJSONCPP})
+target_link_libraries(wilson xml2)
 target_link_libraries(wilson_client xml2)

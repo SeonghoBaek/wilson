@@ -346,7 +346,7 @@ int TermVector::getDistance(TermVector *tv)
 
 	float dist = sqrt(power);
 
-	//LOGI("Distance: %f\n", dist);
+	//LOGI("Session: %d, Distance: %f\n", tv->getLogSession(), dist);
 
 	return (int)dist;
 }

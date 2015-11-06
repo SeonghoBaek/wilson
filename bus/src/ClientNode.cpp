@@ -268,6 +268,8 @@ void ClientNode::createLogFile(const char* pLogDirName)
 	memset(dirPath, 0, LOG_FILE_NAME_LENGTH);
 	memset(curTime, 0, LOG_FILE_NAME_LENGTH);
 
+	mkdir((char *)LOG_DIR, 0755);
+
 	sprintf(dirPath, "%s%s", (char *)LOG_DIR, pLogDirName);
 	strncpy(curTime, t, strlen(t) - 1);
 
@@ -328,6 +330,7 @@ int ClientNode::normalizeLogData(char *data, int length)
 		int dist = tv->getDistance(this->mpPrevVector);
 
 		tv->setDistance(dist);
+		tv->setLogSession(this->mLogSession);
 
 		TermVector *pMinVector = NULL;
 
@@ -392,8 +395,8 @@ int ClientNode::normalizeLogData(char *data, int length)
 			this->mNumOfVectors++;
 		}
 
-		/*
-		if (dist > 10)
+
+		if (dist > 5)
 		{
 			Term *pTerm = NULL;
 
@@ -401,7 +404,7 @@ int ClientNode::normalizeLogData(char *data, int length)
 
 			char buff[1024];
 			memset(buff, 0, 1024);
-			sprintf(buff, "Distance: %d,", dist);
+			sprintf(buff, "Alert!!!! Distance: %d,", dist);
 			char tmp[80];
 			memset(tmp, 0, 80);
 
@@ -412,13 +415,14 @@ int ClientNode::normalizeLogData(char *data, int length)
 				strcat(buff, tmp);
 			}
 
-			LOGD("Vector Summary %s:", this->mClientName);
+			//LOGD("Vector Summary %s:", this->mClientName);
 			LOGD(buff);
 		}
-		*/
+
 	}
 
 	if (this->mpPrevVector && this->mpPrevVector->isGarbage() == TRUE) delete this->mpPrevVector;
+
 	this->mpPrevVector = tv;
 
 	return 0;
@@ -516,7 +520,7 @@ void ClientNode::processEvent(NBUSPacket *pLPacket)
 			delete pEventXml;
 			delete [] xml;
 
-			//this->mState = CLIENT_RUN;
+			this->mState = CLIENT_RUN;
 			this->updateStatus();
 
 			//sleep(1); // Secure DB Update
@@ -552,7 +556,7 @@ void ClientNode::processEvent(NBUSPacket *pLPacket)
 				break; // WAIT, COMPLETE, ERROR: No not save log data.
 			}
 
-			if (this->mClientSession == 0) break; // Test Not Started Yet.
+			//if (this->mClientSession == 0) break; // Test Not Started Yet.
 
 			fd = open(this->mLogFileName, O_RDWR | O_APPEND, 0755);
 			f_offset_t offset = (f_offset_t)lseek(fd, 0, SEEK_END);
@@ -590,6 +594,8 @@ void ClientNode::processEvent(NBUSPacket *pLPacket)
 				this->mpPrevVector->setVersion(this->mLogVersion-1);
 				this->mpPrevVector->setLogSession(this->mLogSession);
 				this->mpBigNode->setVectorLength(this->mLogSession++, this->mpPrevVector->getLength(), this->mClientSession);
+
+				LOGI("Session: %d, Distance: %d\n", this->mpPrevVector->getLogSession(), this->mpPrevVector->getDistance());
 
 				#if (SAVE_PARTIAL_LOG == 1)
 				if (this->mpPrevVector->isGarbage() != TRUE)
