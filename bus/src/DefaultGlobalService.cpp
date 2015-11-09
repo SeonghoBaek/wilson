@@ -57,7 +57,7 @@ void DefaultGlobalService::run()
 
 		memset(dirPath, 0, LOG_FILE_NAME_LENGTH);
 
-		sprintf(dirPath, "%s%s", (char *)SERVER_CONF_DIR, (char *)SERVER_CONF_FILE_NAME);
+		sprintf(dirPath, "%s/%s", (char *)SERVER_CONF_DIR, (char *)SERVER_CONF_FILE_NAME);
 		FILE *frd = fopen(dirPath, "r");
 
 		if (frd)
@@ -94,7 +94,7 @@ void DefaultGlobalService::setGID(unsigned int gid)
 
 	memset(dirPath, 0, LOG_FILE_NAME_LENGTH);
 
-	sprintf(dirPath, "%s%s", (char *)SERVER_CONF_DIR, (char *)SERVER_CONF_FILE_NAME);
+	sprintf(dirPath, "%s/%s", (char *)SERVER_CONF_DIR, (char *)SERVER_CONF_FILE_NAME);
 	FILE *frd = fopen(dirPath, "w");
 
 	if (frd)
