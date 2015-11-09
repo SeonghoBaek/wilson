@@ -301,6 +301,7 @@ IXML* XMLParser::parseXML(const char *xml, int length)
 				}
 				else pEventXml->setID(atoi(pStr));  // Testcase ID
 
+				break;
 			}
 			while(1);
 
