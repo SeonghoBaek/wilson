@@ -203,7 +203,7 @@ void ClientNode::loadVectorDef()
 
 	memset(dirPath, 0, LOG_FILE_NAME_LENGTH);
 
-	sprintf(dirPath, "%s%s", (char *)VEC_DIR, (char *)VEC_FILE_NAME);
+	sprintf(dirPath, "%s/%s", (char *)VEC_DIR, (char *)VEC_FILE_NAME);
 
 	// Load Vector Term Definition
 	FILE *frd = fopen(dirPath, "r");
@@ -270,13 +270,13 @@ void ClientNode::createLogFile(const char* pLogDirName)
 
 	mkdir((char *)LOG_DIR, 0755);
 
-	sprintf(dirPath, "%s%s", (char *)LOG_DIR, pLogDirName);
+	sprintf(dirPath, "%s/%s", (char *)LOG_DIR, pLogDirName);
 	strncpy(curTime, t, strlen(t) - 1);
 
 	mkdir(dirPath, 0755);
 
-	sprintf(this->mLogFileName, "%s%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)LOG_EXT);
-	sprintf(this->mInfoFileName, "%s%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)INFO_EXT);
+	sprintf(this->mLogFileName, "%s/%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)LOG_EXT);
+	sprintf(this->mInfoFileName, "%s/%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)INFO_EXT);
 
 	int fd = creat(this->mLogFileName, 0755);
 
