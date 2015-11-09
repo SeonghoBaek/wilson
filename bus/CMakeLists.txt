@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8)
 project(wilson)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "/usr/local/bin")
+
 include_directories(include)
 include_directories(/usr/include/libxml2)
 
