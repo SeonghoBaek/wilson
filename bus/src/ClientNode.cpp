@@ -276,6 +276,9 @@ void ClientNode::createLogFile(const char* pLogDirName)
 	mkdir(dirPath, 0755);
 
 	sprintf(this->mLogFileName, "%s/%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)LOG_EXT);
+
+	LOGI("Log File: %s", this->mLogFileName);
+
 	sprintf(this->mInfoFileName, "%s/%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)INFO_EXT);
 
 	int fd = creat(this->mLogFileName, 0755);
@@ -619,6 +622,8 @@ void ClientNode::processEvent(NBUSPacket *pLPacket)
 					strcat(vectorJSON, "}");
 
 					if (tmpJSON) delete [] tmpJSON;
+
+					LOGI("JSON Document: %s", vectorJSON);
 
 					this->mpOwner->cast(BIGNODE_NODE_NAME, vectorJSON, strlen(vectorJSON), DB_MESSAGE);
 					//NodeNetwork::sendNodeMessage(BIGNODE_NODE_NAME, vectorJSON, strlen(vectorJSON), DB_MESSAGE);
