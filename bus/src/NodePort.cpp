@@ -275,7 +275,19 @@ void* createClientNodeThread(void *pArg)
 	}
 
 	// Receive Private IP_Public IP
-	sent = NodeNetwork::receiveFromSocket(pNodeArg->sock, pNodeArg->clientName, NODE_NAME_LENGTH);
+	int tempLength = NODE_NAME_LENGTH + 1 + strlen(NBUS_PACKET_START_CODE);
+	char tempBuffer[tempLength];
+
+	sent = NodeNetwork::receiveFromSocket(pNodeArg->sock, tempBuffer, tempLength-1);
+
+	if (strncmp(NBUS_PACKET_START_CODE, tempBuffer, strlen(NBUS_PACKET_START_CODE)))
+	{
+		LOGE("Invalid Client Accepted");
+
+		delete pNodeArg;
+		return NULL;
+	}
+	//sent = NodeNetwork::receiveFromSocket(pNodeArg->sock, pNodeArg->clientName, NODE_NAME_LENGTH);
 
 	if (sent <= 0)
 	{
@@ -284,7 +296,9 @@ void* createClientNodeThread(void *pArg)
 		return NULL;
 	}
 
-	sprintf(logFileName, "%s", pNodeArg->clientName);
+	strncpy(pNodeArg->clientName, tempBuffer + strlen(NBUS_PACKET_START_CODE), NODE_NAME_LENGTH);
+
+	snprintf(logFileName, NODE_NAME_LENGTH, "%s", pNodeArg->clientName);
 	LOGI("New Client Node Accepted: %s", pNodeArg->clientName);
 
 	ClientNode* pClientNode;
