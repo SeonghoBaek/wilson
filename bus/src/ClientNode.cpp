@@ -625,7 +625,7 @@ void ClientNode::processEvent(NBUSPacket *pLPacket)
 
 					LOGI("JSON Document: %s", vectorJSON);
 
-					this->mpOwner->cast(BIGNODE_NODE_NAME, vectorJSON, strlen(vectorJSON), DB_MESSAGE);
+					this->mpOwner->cast(BIGNODE_NODE_NAME, vectorJSON, (unsigned int)strlen(vectorJSON), DB_MESSAGE);
 					//NodeNetwork::sendNodeMessage(BIGNODE_NODE_NAME, vectorJSON, strlen(vectorJSON), DB_MESSAGE);
 
 					if (vectorJSON) delete [] vectorJSON;
@@ -1387,7 +1387,7 @@ int ClientNode::setRun()
 			);
 
 	//this->mpOwner->cast(MGS_NODE_NAME, statusJSON, strlen(statusJSON));
-	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, strlen(statusJSON), DB_MESSAGE);
+	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, (unsigned int)strlen(statusJSON), DB_MESSAGE);
 
 	//LOGD("Complete Update RUN Status: %s", this->getName());
 
@@ -1408,7 +1408,7 @@ int ClientNode::setError()
 			0);
 
 	//this->mpOwner->cast(MGS_NODE_NAME, statusJSON, strlen(statusJSON));
-	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, strlen(statusJSON), DB_MESSAGE);
+	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, (unsigned int)strlen(statusJSON), DB_MESSAGE);
 
 	return 0;
 }
@@ -1446,7 +1446,7 @@ int ClientNode::setComplete()
 			0);
 
 	//this->mpOwner->cast(MGS_NODE_NAME, statusJSON, strlen(statusJSON));
-	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, strlen(statusJSON), DB_MESSAGE);
+	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, (unsigned int)strlen(statusJSON), DB_MESSAGE);
 
 	return 0;
 }
@@ -1470,7 +1470,7 @@ int ClientNode::setWait()
 			);
 
 	//this->mpOwner->cast(MGS_NODE_NAME, statusJSON, strlen(statusJSON));
-	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, strlen(statusJSON), DB_MESSAGE);
+	this->mpOwner->cast(BIGNODE_NODE_NAME, statusJSON, (unsigned int)strlen(statusJSON), DB_MESSAGE);
 
 	return 0;
 }

@@ -334,7 +334,7 @@ int TermVector::getDistance(TermVector *tv)
 	Term *pTerm1 = NULL;
 	Term *pTerm2 = NULL;
 	float power = 0;
-	float length = 0;
+	//float length = 0;
 
 	pTerm2 = this->mpTermList->p_next;
 

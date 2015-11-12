@@ -125,7 +125,7 @@ int NodeLooper::timer()
 int NodeLooper::wait(int mili)
 {
 	bool exit = FALSE;
-	int res;
+	int res = 0;
 	char buff[BUFSIZ + 1];
 	struct pollfd fds[1];
 
@@ -139,7 +139,6 @@ int NodeLooper::wait(int mili)
 
 		if (fds[0].revents & POLLIN)
 		{
-			res = 0;
 			int nReadBytes = (int)read(fds[0].fd, buff, BUFSIZ);
 			int nMsg = nReadBytes/LOOPER_EVT_LENGTH;
 

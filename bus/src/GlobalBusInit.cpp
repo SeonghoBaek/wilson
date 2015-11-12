@@ -7,7 +7,6 @@
 #include "Log.h"
 #include "NodeLooper.h"
 #include "Thread.h"
-#include "json/json.h"
 #include "XMLTypes.h"
 #include "XMLParser.h"
 #include "DefaultService.h"
