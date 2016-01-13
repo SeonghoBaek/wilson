@@ -1087,6 +1087,8 @@ void ClientNode::cleanUp()
 int ClientNode::safeRead(void *buff, unsigned int length)
 {
 	int recv = 0;
+	int MAX_TIMEOUT = 5;
+	int retry = 0;
 
 	struct pollfd fds[1];
 
@@ -1102,6 +1104,8 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 		{
 			bool bExit = FALSE;
 
+			retry++;
+
 			LOCK(this->mLock)
 			{
 				if ( this->mExitNode != FALSE )
@@ -1110,6 +1114,15 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 					this->mErrorId = NONE_ERROR;
 
 					bExit = TRUE;
+				}
+				else
+				{
+					if (retry >= MAX_TIMEOUT)
+					{
+						this->mErrorId = CONNECTION_CLOSED;
+
+						bExit = TRUE;
+					}
 				}
 			}
 
