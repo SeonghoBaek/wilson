@@ -20,7 +20,7 @@
 */
 #define DOMAIN_PREFIX "/var/tmp/"
 
-#define LOG_DIR "/usr/local/log/wilson"
+#define LOG_DIR "/tmp/wilson"
 
 #define TMP_DIR "/tmp/"
 
@@ -30,11 +30,11 @@
 
 #define INFO_EXT ".info"
 
-#define VEC_DIR "/usr/local/log/wilson"
+#define VEC_DIR "/tmp/wilson"
 
 #define VEC_FILE_NAME "vector.def"
 
-#define SERVER_CONF_DIR "/usr/local/log/wilson"
+#define SERVER_CONF_DIR "/tmp/wilson"
 
 #define SERVER_CONF_FILE_NAME "server.conf"
 

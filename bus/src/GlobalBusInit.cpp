@@ -20,9 +20,9 @@
 
 int main(int argc, char** argv)
 {
-	if (argc < 2)
+	if (argc < 3)
 	{
-		LOGI("usage: %s <bind address> <port>\n", argv[0]);
+		LOGI("usage: %s <bind address> <port> <log directory>\n", argv[0]);
 
 		return -1;
 	}
@@ -51,6 +51,7 @@ int main(int argc, char** argv)
 
 	pNodeBusGlobalService->init();
 	pNodeBusGlobalService->setGlobalServerAddress(argv[1], atoi(argv[2]));
+	pNodeBusGlobalService->setLogDirectory(argv[3]);
 
 	LOGI("Run NodeBus Global Server: %s:%d\n", argv[1], atoi(argv[2]));
 

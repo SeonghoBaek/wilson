@@ -87,6 +87,7 @@ class DefaultService: public NodeBusService
 
 		char 			*mpServerAddress;
 		int  			mServerPort;
+		char 			*mpLogDirectory;
 		char			mServiceName[SERVICE_NAME_LENGTH];
 		int				mNumOfNode;
 		NodeEntry		*mpNodeListHead;
@@ -144,6 +145,10 @@ class DefaultService: public NodeBusService
 		}
 
 		virtual void setGlobalServerAddress(char *address, int port) { mpServerAddress = address; mServerPort = port; }
+
+		virtual void setLogDirectory(char *directory) { mpLogDirectory = directory; }
+
+		virtual char* getLogDirectory() { return mpLogDirectory; }
 
 		virtual void run();
 

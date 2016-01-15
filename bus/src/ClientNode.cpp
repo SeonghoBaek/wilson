@@ -200,10 +200,11 @@ ClientNode::ClientNode(int socket, char* pClientName, DefaultGlobalService *pOwn
 void ClientNode::loadVectorDef()
 {
 	char dirPath[LOG_FILE_NAME_LENGTH];
+	char *pVecDIR = this->mpOwner->getLogDirectory();
 
 	memset(dirPath, 0, LOG_FILE_NAME_LENGTH);
 
-	sprintf(dirPath, "%s/%s", (char *)VEC_DIR, (char *)VEC_FILE_NAME);
+	sprintf(dirPath, "%s/%s", pVecDIR, (char *)VEC_FILE_NAME);
 
 	// Load Vector Term Definition
 	FILE *frd = fopen(dirPath, "r");
@@ -264,22 +265,23 @@ void ClientNode::createLogFile(const char* pLogDirName)
 	char dirPath[LOG_FILE_NAME_LENGTH];
 	char curTime[LOG_FILE_NAME_LENGTH];
 	char *t = ctime(&now);
+	char *pLogDIR = this->mpOwner->getLogDirectory();
 
 	memset(dirPath, 0, LOG_FILE_NAME_LENGTH);
 	memset(curTime, 0, LOG_FILE_NAME_LENGTH);
 
-	mkdir((char *)LOG_DIR, 0755);
+	mkdir(pLogDIR, 0755);
 
-	sprintf(dirPath, "%s/%s", (char *)LOG_DIR, pLogDirName);
+	sprintf(dirPath, "%s/%s", pLogDIR, pLogDirName);
 	strncpy(curTime, t, strlen(t) - 1);
 
 	mkdir(dirPath, 0755);
 
-	sprintf(this->mLogFileName, "%s/%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)LOG_EXT);
+	sprintf(this->mLogFileName, "%s/%s/%s%s", pLogDIR, pLogDirName, curTime, (char *)LOG_EXT);
 
 	LOGI("Log File: %s", this->mLogFileName);
 
-	sprintf(this->mInfoFileName, "%s/%s/%s%s", (char *)LOG_DIR, pLogDirName, curTime, (char *)INFO_EXT);
+	sprintf(this->mInfoFileName, "%s/%s/%s%s", pLogDIR, pLogDirName, curTime, (char *)INFO_EXT);
 
 	int fd = creat(this->mLogFileName, 0755);
 
