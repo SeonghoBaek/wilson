@@ -1100,6 +1100,8 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 
 	for(;;)
 	{
+		fds[0].revents = 0;
+
 		poll(fds, 1, SOCKET_TIME_OUT);
 
 		if (!(fds[0].revents & POLLIN))
@@ -1122,6 +1124,7 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 					if (retry >= MAX_TIMEOUT)
 					{
 						this->mErrorId = CONNECTION_CLOSED;
+						LOGE("Client Time Out!");
 
 						bExit = TRUE;
 					}

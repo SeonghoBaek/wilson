@@ -131,10 +131,11 @@ int NodeLooper::wait(int mili)
 
 	fds[0].fd = this->mFd[0];
 	fds[0].events = POLLIN;
-	fds[0].revents = 0;
 
 	for (;;)
 	{
+		fds[0].revents = 0;
+
 		poll(fds, 1, mili);
 
 		if (fds[0].revents & POLLIN)
