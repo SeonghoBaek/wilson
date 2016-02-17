@@ -1089,14 +1089,13 @@ void ClientNode::cleanUp()
 int ClientNode::safeRead(void *buff, unsigned int length)
 {
 	int recv = 0;
-	int MAX_TIMEOUT = 5;
+	int MAX_TIMEOUT = 60; // 60 seconds
 	int retry = 0;
 
 	struct pollfd fds[1];
 
 	fds[0].fd = this->mSd;
-	fds[0].events = POLLIN;
-	fds[0].revents = 0;
+	fds[0].events = POLLIN | POLLERR | POLLHUP | POLLPRI;
 
 	for(;;)
 	{
@@ -1104,19 +1103,40 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 
 		poll(fds, 1, SOCKET_TIME_OUT);
 
-		if (!(fds[0].revents & POLLIN))
+		if (fds[0].revents & POLLIN || fds[0].revents & POLLPRI)
+		{
+			recv = (int)read(this->mSd, buff, length);
+		}
+		else if (fds[0].revents & POLLHUP)
+		{
+			this->mErrorId = CONNECTION_CLOSED;
+			LOGE("Connection Closed");
+
+			recv = -2;
+			break;
+		}
+		else if (fds[0].revents & POLLERR)
+		{
+			this->mErrorId = CONNECTION_CLOSED;
+			LOGE("Poll ERROR");
+
+			recv = -2;
+			break;
+		} 
+		else
 		{
 			bool bExit = FALSE;
 
 			retry++;
 
+			LOGE("Poll Time Out: %d", retry);
+		
 			LOCK(this->mLock)
 			{
 				if ( this->mExitNode != FALSE )
 				{
 					recv = -1;
 					this->mErrorId = NONE_ERROR;
-
 					bExit = TRUE;
 				}
 				else
@@ -1125,7 +1145,6 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 					{
 						this->mErrorId = CONNECTION_CLOSED;
 						LOGE("Client Time Out!");
-
 						bExit = TRUE;
 					}
 				}
@@ -1141,8 +1160,6 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 			continue;
 		}
 
-		recv = (int)read(this->mSd, buff, length);
-
 		if (recv <= 0)
 		{
 			strerror(errno);
@@ -1154,6 +1171,7 @@ int ClientNode::safeRead(void *buff, unsigned int length)
 
 			LOGE("Connection Closed: %s", this->mClientName);
 		}
+
 
 		break;
 	}
