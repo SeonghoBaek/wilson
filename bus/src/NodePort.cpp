@@ -213,7 +213,7 @@ int NodePort::listen()
 		this->mpOwner->mpLooper->wakeup();
 	}
 
-	if (packetPreffix) delete packetPreffix;
+	if (packetPreffix) delete [] packetPreffix;
 
 	return 0;
 }
